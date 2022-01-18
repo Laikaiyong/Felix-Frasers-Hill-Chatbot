@@ -1,11 +1,16 @@
+// var socket;
 $(document).ready(function() {
 	$('form').on('submit', function(event) {
 		$.ajax({
 			data : {
+				name: $('.username').val(),
 				message : $('#message').val()
 			},
 			type : 'POST',
-			url : '/chatbot'
+			url : '/chatbot',
+			success: function(response) {
+				$("body").html(response);
+			},
 		})
         clearChat();
 		event.preventDefault();
