@@ -63,11 +63,18 @@
             aria-label="Type your message here" 
             aria-describedby="button-addon2"
             name="message">
+            <button
+            class="btn btn-light"
+            type="button"
+            method="GET"
+            onclick="speechToText()">
+                <i class="fas fa-microphone"></i>
+            </button>
             <div class="input-group-append">
                 <button 
                 class="btn btn-primary send-btn" 
                 type="submit" 
-                id="button-addon2" 
+                id="button-addon" 
                 method="post" 
                 value="submit">
                     <i class="fas fa-paper-plane"></i>

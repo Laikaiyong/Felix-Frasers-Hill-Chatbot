@@ -17,11 +17,23 @@ $(document).ready(function() {
 	});
 });
 
-// function clickButton(logkey) {
-//     if (logkey.code == "Enter") {
-//         $('.send-btn').click();
-//     }
-// }
+function speechToText() {
+	var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
+	var recognition = new SpeechRecognition();
+
+	recognition.onstart = function() {};
+
+	recognition.onspeechend = function() {
+		recognition.stop();
+	}
+
+	recognition.onresult = function(event) {
+		var transcript = event.results[0][0].transcript;
+		$('#message').val(transcript);
+	};
+
+	recognition.start();
+}
 
 function clearChat() {
     $('#message').val('');

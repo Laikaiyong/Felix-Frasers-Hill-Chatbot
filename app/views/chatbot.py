@@ -19,9 +19,7 @@ messages_file = open('/Users/USER/Downloads/IAI/app/views/database/chatbot_init.
 response_file = open('/Users/USER/Downloads/IAI/app/views/database/response.json')
 
 messages = json.load(messages_file)['messages']
-print(messages)
 responses = json.load(response_file)
-print(responses)
 
 # http://127.0.0.1:5000/chatbot
 @blueprint.route('/chatbot', methods=['GET'])
@@ -50,7 +48,7 @@ def add_role():
     if polarity['neg'] > 0.5:
         messages.append({
             'sentBy': 'Bot',
-            'content': 'Sorry I could not understand your message' 
+            'content': 'Sorry your message is inappropriate. Mind your words.' 
         })
     else:
         X_train, input_message = model.tf_idf(message)
