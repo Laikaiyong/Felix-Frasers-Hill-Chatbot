@@ -1,10 +1,59 @@
 {
     "greetings": [
-        "Hi I am Vandyck, a helloworld chatbot.",
-        "Hi Dont come Fraser Hill, boring and make my life easier"
+        "Hi I am Felix, a Fraser's Hill support chatbot.",
+        "Welcome! Felix at your service. What can I help you with?"
     ],
     "goodbye": [
         "Bye have a nice day",
-        "Bye and I dw to see u here again"
+        "Goodbye and hope we meet soon."
+    ],
+    "thankyou": [
+        "You are most welcome. ",
+        "Good to know, you are welcome.",
+        "Have a good day ahead."
+    ],
+    "funfacts": [
+        "Fraser's Hill has a telephone booth in between the border of Selangor and Pahang. ",
+        "A Japanese communication shed is said to still exist in the dense forest along Hemmant's trail.",
+        "Fraser Hill stations were developed by British colonists to escape suffocating summer heat and became popular holiday resort towns.",
+        "Fraser's Hill is known as Little England because of the idyllic hills and chilly weather.",
+        "The founder of Fraser's Hill, Louis James Fraser vanished without a trace while going out for a walk in Fraser's Hill.",
+        "There are two ways to travel to Fraser's Hill, one through Kuala Kubu Bharu (KKB) or Bentong towns.",
+        "'The Gap' indicates the start of Fraser's hill's challenging and steep roads.",
+        "Fraser's Hill temperatures falls in the range of 18 to 25 degrees during daytime.",
+        "Fraser's Hill does not have any cabs.",
+        "Fraser Hill does not have any petrol stations, however canned petrols are found by the roadside",
+        "Fraser Hill is home to one of the oldest golf courses in Malaysia."
+    ],
+    "suggestplan": [
+        "/plan"
+    ],
+    "location": [
+        "Sini babi ",
+        "Jangan Mari Mapukik"
+    ],
+    "fees": [
+        "Poverty people dun come stupid ",
+        "Holoq holoq"
+    ],
+    "prepare": [
+        "Please fill in your fuel tank until it is sufficient as there are no petrol stations around.",
+        "Please prepare picnic equipments if you are interesting in picnic at Fraser's Hill.",
+        "Take a camera if you wish to record all the memories at Fraser's Hill!",
+        "Please bring sufficient money so that you can buy everything you like at Fraser's Hill!",
+        "Please prepare trekking and hiking equipments if you wish to hike in one of the signposted trails around Fraser's Hill!",
+        "Please bring your own tennis racket and ball if you wish to play tennis at the public court!"
+    ],
+    "activities": [
+        "Fraser's Hill is famed worldwide as a birdwatching destination especially in June!",
+        "You can do hiking there as there are 8 signposted trails around Fraser's Hill",
+        "You can also play golf at Fraser's Hill Gold Club which open daily between 8AM and 7PM!",
+        "Fraser's Hill provides two public courts on the Pines Road for playing tennis!",
+        "You can visit the Allen's Water Lake which is a great location for family activities such as feeding the fish and sightseeing around the lake!",
+        "In Allen's Water Lake, you can book your paddle boats  come with safety jacket to explore the lake!",
+        "Try horse riding and archery at The Paddock if you are interesting in such sports!",
+        "Visit the Jeriau Waterfalls if you want to picnic with your family or you just wish to find a location for swimming.",
+        "Take a photograph of the beautiful flowers that are grown all over Fraser's Hill."
     ]
 }
+    

@@ -38,7 +38,13 @@
         <div class="bot-chat">
             <div class="card bot-response card text-white bg-primary mb-3">
                 <!-- <h6 class="card-title h6">Bot</h6> -->
+                {% if "/plan" in message.content %}
+                <a target="_blank" href="{{ message.content }}">
+                    <button type="button" class="btn btn-primary nav-link btn-sm">Plan</button>
+                </a>
+                {% else %}
                 <p class="card-text">{{ message.content }}</p>
+                {% endif %}
             </div>
         </div>
         {% else %}
