@@ -5,10 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Felix Chatbot</title>
 
-    <link rel="icon" href="https://prod.cloud.rockstargames.com/crews/sc/2620/9252858/publish/emblem/emblem_256.png">
+    <link rel="icon" href="../static/favicon.ico">
     <!-- Styling -->
     <link href="../static/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="../static/css/style.css">
+
+    <!-- Google Font -->
+    <link 
+    rel="preconnect" 
+    href="https://fonts.googleapis.com">
+    <link 
+    rel="preconnect" 
+    href="https://fonts.gstatic.com" 
+    crossorigin>
+    <link 
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap" 
+    rel="stylesheet">
     
     <!-- Font Awesome -->
     <link 
@@ -24,7 +36,7 @@
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
           <img 
-          src="https://prod.cloud.rockstargames.com/crews/sc/2620/9252858/publish/emblem/emblem_256.png" 
+          src="../static/felix.svg" 
           width="30" 
           height="30" 
           class="d-inline-block align-top" 
@@ -54,12 +66,12 @@
   </header>
 
   <main>
-    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+    <div class="position-relative overflow-hidden p-3 text-center bg-secondary">
       <div class="col-md-5 p-lg-5 mx-auto my-5">
-        <img src="https://prod.cloud.rockstargames.com/crews/sc/2620/9252858/publish/emblem/emblem_256.png" alt="">
-        <h1 class="display-4 fw-normal">Felix</h1>
-        <p class="lead fw-normal">Fraser's Hill Support Chatbot for general advice and conversation.</p>
-        <a class="nav-link btn btn-outline-secondary" href="/chatbot">Try it</a>
+        <img src="../static/felix.svg" height="200px" width="auto" alt="">
+        <h1 class="display-4 fw-normal text-white fw-bolder">Felix</h1>
+        <p class="lead fw-normal text-white">Fraser's Hill Support Chatbot for general advice and conversation.</p>
+        <a class="nav-link btn btn-outline-warning" href="/chatbot">Try it</a>
       </div>
       <div class="product-device shadow-sm d-none d-md-block"></div>
       <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
@@ -69,12 +81,21 @@
   <div class="mt-3 container marketing">
     <!-- START THE FEATURETTES -->
     <div class="row featurette">
-      <div class="col-md-7">
+      <div class="col-md-7 mt-5">
         <h2 class="featurette-heading">Serve General Needs<span class="text-muted">- Chat Conversation</span></h2>
-        <p class="lead">Support User Intents on greetings, goodbye, plan, place, activities suggestion etc.</p>
+        <p class="lead">Support User Intents on:</p>
+        <ul>
+          <li>Greetings</li>
+          <li>Goodbye</li>
+          <li>Thank You</li>
+          <li>Travel Plan</li>
+          <li>Place</li>
+          <li>Activities Suggestion</li>
+          <li>etc...</li>
+        </ul>
       </div>
-      <div class="col-md-5">
-        <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/1200px-Image_created_with_a_mobile_phone.png" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"></img>
+      <div class="col-md-5 mt-5">
+        <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto shadow p-3 mb-5 bg-body rounded" width="500" height="500" src="/static/img/chatbot-conversation.png" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"></img>
 
       </div>
     </div>
@@ -82,12 +103,20 @@
     <hr class="featurette-divider">
 
     <div class="row featurette">
-      <div class="col-md-7 order-md-2">
+      <div class="col-md-7 order-md-2 mt-5">
         <h2 class="featurette-heading">Built in<span class="text-muted"> - Python</span></h2>
-        <p class="lead">Dependents on python libraries including numpy, pandas, json, scikit-learn, nltk etc.</p>
+        <p class="lead">Dependents on python libraries including: numpy, pandas, json, scikit-learn, nltk etc.</p>
+        <ul>
+          <li>numpy</li>
+          <li>pandas</li>
+          <li>json</li>
+          <li>scikit-learn</li>
+          <li>nltk</li>
+          <li>etc...</li>
+        </ul>
       </div>
-      <div class="col-md-5 order-md-1">
-        <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" src="https://media.istockphoto.com/photos/colorful-background-of-pastel-powder-explosionrainbow-color-dust-on-picture-id1180542165?k=20&m=1180542165&s=612x612&w=0&h=43hlhk8qdGYP4V-u3AAxD3kPDRIzHjMNWpr-VdBQ2Js=" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"></img>
+      <div class="col-md-5 order-md-1 mt-5">
+        <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto shadow p-3 mb-5 bg-body rounded" width="500" height="500" src="../static/img/python-image.png" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"></img>
 
       </div>
     </div>
@@ -95,13 +124,20 @@
     <hr class="featurette-divider">
 
     <div class="row featurette">
-      <div class="col-md-7">
+      <div class="col-md-7 mt-5">
         <h2 class="featurette-heading">With machine learning <span class="text-muted">algorithms</span></h2>
-        <p class="lead">Built through AI algorithms such as Count vectorizer, TF-IDF, Support Vector Machine, Naive Bayes etc.</p>
+        <p class="lead">Built through AI algorithms such as:</p>
+        <ul>
+          <li>Count Vectorizer</li>
+          <li>TF-IDF Vectorizer</li>
+          <li>Support Vector Machine (SVM)</li>
+          <li>Naive Bayes</li>
+          <li>Decision Tree</li>
+          <li>etc...</li>
+        </ul>
       </div>
-      <div class="col-md-5">
-        <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1Qid_95pZtJw760c098biFHM6qz-SQr-vXPBWwC2hTknZauF0DT59n4Q1DhKCjc0aOcY&usqp=CAU" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"></img>
-
+      <div class="col-md-5 mt-5">
+        <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto shadow p-3 mb-5 bg-body rounded" width="500" height="500" src="../static/img/wordcloud.png" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"></img>
       </div>
     </div>
 
@@ -115,28 +151,28 @@
 
         <h2 style="margin-top: 20px;">Vandyck</h2>
         <p>Developer / Knowledge Base</p>
-        <p><a class="btn btn-secondary" href="https://www.linkedin.com/in/lai-kai-yong/">LinkedIn</a></p>
+        <p><a class="btn btn-secondary" target="_blank" href="https://www.linkedin.com/in/lai-kai-yong/">LinkedIn</a></p>
       </div>
       <div class="col-lg-4" style="margin-top: 40px;">
         <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="/static/img/Cheryl.jpg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"></img>
 
         <h2 style="margin-top: 20px;">Cheryl</h2>
         <p>Domain Expert / Knowledge Base</p>
-        <p><a class="btn btn-secondary" href="https://www.linkedin.com/in/lim-wye-yee-026717202">LinkedIn</a></p>
+        <p><a class="btn btn-secondary" target="_blank" href="https://www.linkedin.com/in/lim-wye-yee-026717202">LinkedIn</a></p>
       </div>
       <div class="col-lg-4" style="margin-top: 40px;">
         <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="/static/img/Cheong.jpg" role="img" aria-label="Placeholder: 140x140" focusable="true"></img>
 
         <h2 style="margin-top: 20px;">Cheong</h2>
         <p>System Tester / Knowledge Base</p>
-        <p><a class="btn btn-secondary" href="https://www.linkedin.com/in/cheong-sheng-kui-263497224/">LinkedIn</a></p>
+        <p><a class="btn btn-secondary" target="_blank" href="https://www.linkedin.com/in/cheong-sheng-kui-263497224/">LinkedIn</a></p>
       </div>
       <div class="col-lg-4" style="margin-top: 40px;">
         <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="/static/img/hk.jpeg" role="img" aria-label="Placeholder: 140x140" focusable="true"></img>
 
         <h2 style="margin-top: 20px;">Hon Kit</h2>
         <p>System Analyst / Knowledge Base</p>
-        <p><a class="btn btn-secondary" href="https://www.linkedin.com/in/hon-kit-kok-0434b8211/">LinkedIn</a></p>
+        <p><a class="btn btn-secondary" target="_blank" href="https://www.linkedin.com/in/hon-kit-kok-0434b8211/">LinkedIn</a></p>
       </div>
     </div>
   </div>
