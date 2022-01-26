@@ -62,6 +62,117 @@
         "Try horse riding and archery at The Paddock if you are interesting in such sports!",
         "Visit the Jeriau Waterfalls if you want to picnic with your family or you just wish to find a location for swimming.",
         "Take a photograph of the beautiful flowers that are grown all over Fraser's Hill."
-    ]
+    ],
+    "accomodation": [
+        "This is the list of the accomodations."
+    ],
+    "ac_location":{
+        "Shahzan Inn": [
+            "You can live in Shahzan Inn",
+            ""
+        ],
+        "Puncak Inn": [
+            ""
+        ],
+        "The Pines": [
+            ""
+        ],
+        "Silverpark Resort": [
+            ""
+        ],
+        "Sarang by the Brook": [
+            ""
+        ]
+    },
+    "ac_roomtype":{
+        "Shahzan Inn": [
+            "You can live in Shahzan Inn",
+            ""
+        ],
+        "Puncak Inn": [
+            ""
+        ],
+        "The Pines": [
+            ""
+        ],
+        "Silverpark Resort": [
+            ""
+        ],
+        "Sarang by the Brook": [
+            ""
+        ]
+    },
+    "ac_price":{
+        "Shahzan Inn": [
+            "You can live in Shahzan Inn",
+            ""
+        ],
+        "Puncak Inn": [
+            ""
+        ],
+        "The Pines": [
+            ""
+        ],
+        "Silverpark Resort": [
+            ""
+        ],
+        "Sarang by the Brook": [
+            ""
+        ]
+    },
+    "ac_facilities":{
+        "Shahzan Inn": [
+            "You can live in Shahzan Inn",
+            ""
+        ],
+        "Puncak Inn": [
+            ""
+        ],
+        "The Pines": [
+            ""
+        ],
+        "Silverpark Resort": [
+            ""
+        ],
+        "Sarang by the Brook": [
+            ""
+        ]
+    },
+    "ac_review":{
+        "Shahzan Inn": [
+            "You can live in Shahzan Inn",
+            ""
+        ],
+        "Puncak Inn": [
+            ""
+        ],
+        "The Pines": [
+            ""
+        ],
+        "Silverpark Resort": [
+            ""
+        ],
+        "Sarang by the Brook": [
+            ""
+        ]
+    },
+    "ac_landmark":{
+        "Shahzan Inn": [
+            "You can live in Shahzan Inn",
+            ""
+        ],
+        "Puncak Inn": [
+            ""
+        ],
+        "The Pines": [
+            ""
+        ],
+        "Silverpark Resort": [
+            ""
+        ],
+        "Sarang by the Brook": [
+            ""
+        ]
+    }
 }
     

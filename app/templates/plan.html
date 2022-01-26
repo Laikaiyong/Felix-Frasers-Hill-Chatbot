@@ -33,132 +33,28 @@
     <div style="height:30px;"></div>
     <div class="container">
         <div class="row justify-content-around">
+          {% for plan in plans %}
           <div class="col-4">
             <div class="list-group">
                 <a class="list-group-item list-group-item-action flex-column align-items-start active">
                   <div class="d-flex w-100 justify-content-between text-white">
-                    <h5 class="mb-1">Plan A</h5>
+                    <h5 class="mb-1">{{ plan.name }}</h5>
                   </div>
                 </a>
+                {% for number in range(8)%}
+                {% set time = plan["time"][loop.index-1] %}
+                {% set activity = plan["activity"][loop.index-1] %}
                 <a class="list-group-item list-group-item-action flex-column align-items-start">
                   <div class="d-flex w-100 justify-content-between">
-                    <h5 class="mb-1">8a.m. - 8:30p.m.</h5>
+                    <h5 class="mb-1">{{ time }}</h5>
                   </div>
-                  <p class="mb-1">Relax at Jeriau Waterfall.</p>
+                  <p class="mb-1">{{ activity }}</p>
                 </a>
-                <a class="list-group-item list-group-item-action flex-column align-items-start">
-                    <div class="d-flex w-100 justify-content-between">
-                      <h5 class="mb-1">8:30a.m. - 10:30a.m.</h5>
-                    </div>
-                    <p class="mb-1">Hike at Bishop's Trail.</p>
-                  </a>
-                <a class="list-group-item list-group-item-action flex-column align-items-start">
-                  <div class="d-flex w-100 justify-content-between">
-                    <h5 class="mb-1">10:30a.m. - 12:30a.m.</h5>
-                  </div>
-                  <p class="mb-1">Go for birdwatching.</p>
-                </a>
-                <a class="list-group-item list-group-item-action flex-column align-items-start">
-                    <div class="d-flex w-100 justify-content-between">
-                      <h5 class="mb-1">12:30a.m. - 1:00p.m.</h5>
-                    </div>
-                    <p class="mb-1">Hike at Hemmant Trail.</p>
-                  </a>
-                  <a class="list-group-item list-group-item-action flex-column align-items-start">
-                    <div class="d-flex w-100 justify-content-between">
-                      <h5 class="mb-1">1:00p.m.- 2:00p.m.</h5>
-                    </div>
-                    <p class="mb-1">Have a lunch Arzed Cafe.</p>
-                  </a>
-                  <a class="list-group-item list-group-item-action flex-column align-items-start">
-                    <div class="d-flex w-100 justify-content-between">
-                      <h5 class="mb-1">2:00p.m.- 3:00p.m.</h5>
-                    </div>
-                    <p class="mb-1">Visit the Clock Tower.</p>
-                  </a>
-                  <a class="list-group-item list-group-item-action flex-column align-items-start">
-                    <div class="d-flex w-100 justify-content-between">
-                      <h5 class="mb-1">3:00p.m. - 5:30p.m.</h5>
-                    </div>
-                    <p class="mb-1">Playing golf at Fraser's Hill Golf Club.</p>
-                  </a>
-                  <a class="list-group-item list-group-item-action flex-column align-items-start">
-                    <div class="d-flex w-100 justify-content-between">
-                      <h5 class="mb-1">5:30p.m.- 6:30p.m.</h5>
-                    </div>
-                    <p class="mb-1">Shopping souvenirs at Kraftangan & Cenderamata Bukit Fraser.</p>
-                  </a>
-                  <a class="list-group-item list-group-item-action flex-column align-items-start">
-                    <div class="d-flex w-100 justify-content-between">
-                      <h5 class="mb-1">6:30p.m - 7:30p.m.</h5>
-                    </div>
-                    <p class="mb-1">Dinner at The Hillview Restaurant.</p>
-                  </a>
+                {% endfor %}
               </div>
           </div>
-          <!-- Plan B -->
-          <div class="col-4">
-            <div class="list-group">
-                <a class="list-group-item list-group-item-action flex-column align-items-start active">
-                  <div class="d-flex w-100 justify-content-between text-white">
-                    <h5 class="mb-1">Plan B</h5>
-                  </div>
-                </a>
-                <a class="list-group-item list-group-item-action flex-column align-items-start">
-                  <div class="d-flex w-100 justify-content-between">
-                    <h5 class="mb-1">8a.m. - 8:30p.m.</h5>
-                  </div>
-                  <p class="mb-1">Visit the clock tower and snap some pictures.</p>
-                </a>
-                <a class="list-group-item list-group-item-action flex-column align-items-start">
-                    <div class="d-flex w-100 justify-content-between">
-                      <h5 class="mb-1">8:30a.m. - 9:30a.m.</h5>
-                    </div>
-                    <p class="mb-1">Go for birdwatching.</p>
-                  </a>
-                <a class="list-group-item list-group-item-action flex-column align-items-start">
-                  <div class="d-flex w-100 justify-content-between">
-                    <h5 class="mb-1">9:30a.m. - 11:30a.m.</h5>
-                  </div>
-                  <p class="mb-1">Hike at one of the trails (Pine Tree trail not recommended for this timeframe).</p>
-                </a>
-                <a class="list-group-item list-group-item-action flex-column align-items-start">
-                    <div class="d-flex w-100 justify-content-between">
-                      <h5 class="mb-1">11:30a.m. - 1:00p.m.</h5>
-                    </div>
-                    <p class="mb-1">Head over to The Paddocks for archery and horse rides.</p>
-                  </a>
-                  <a class="list-group-item list-group-item-action flex-column align-items-start">
-                    <div class="d-flex w-100 justify-content-between">
-                      <h5 class="mb-1">1:00p.m.- 2:00p.m.</h5>
-                    </div>
-                    <p class="mb-1">Lunch at Scott's Restaurant and Pub.</p>
-                  </a>
-                  <a class="list-group-item list-group-item-action flex-column align-items-start">
-                    <div class="d-flex w-100 justify-content-between">
-                      <h5 class="mb-1">2:00p.m.- 3:30p.m.</h5>
-                    </div>
-                    <p class="mb-1">Chill at Jeriau Waterfall.</p>
-                  </a>
-                  <a class="list-group-item list-group-item-action flex-column align-items-start">
-                    <div class="d-flex w-100 justify-content-between">
-                      <h5 class="mb-1">3:30p.m. - 5:30p.m.</h5>
-                    </div>
-                    <p class="mb-1">Enjoy water sports at Allen's water.</p>
-                  </a>
-                  <a class="list-group-item list-group-item-action flex-column align-items-start">
-                    <div class="d-flex w-100 justify-content-between">
-                      <h5 class="mb-1">5:30p.m.- 6:30p.m.</h5>
-                    </div>
-                    <p class="mb-1">Visit Sanyi's Orchid Garden.</p>
-                  </a>
-                  <a class="list-group-item list-group-item-action flex-column align-items-start">
-                    <div class="d-flex w-100 justify-content-between">
-                      <h5 class="mb-1">6:30p.m - 7:30p.m.</h5>
-                    </div>
-                    <p class="mb-1">Dinner at The Olde Smokehouse.</p>
-                  </a>
-              </div>
+          {% endfor %}
         </div>
+    </div>
 </body>
 </html>

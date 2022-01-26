@@ -32,12 +32,12 @@ class SelfModel:
     # Training Data
     def _get_data(self):
         # Read data and process
-        unprocessed_data = pd.read_excel('/Users/USER/Downloads/IAI/app/algorithm/database/data.xlsx')
+        excel_data = pd.ExcelFile('/Users/USER/Downloads/IAI/app/algorithm/database/data.xlsx')
+        unprocessed_data = pd.read_excel(excel_data, 'Train')
 
         # X, y
         X = unprocessed_data['message'].tolist()
         y = unprocessed_data['intent']
-        # y = unprocessed_data['intent'].tolist()
         unique_y = np.unique(y)
 
         return {

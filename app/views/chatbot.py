@@ -15,6 +15,9 @@ model = FinalModel()
 X = model.X
 y = model.y
 
+HOTEL = []
+accomodation_tag = ''
+
 messages_file = open('/Users/USER/Downloads/IAI/app/views/database/chatbot_init.json')
 response_file = open('/Users/USER/Downloads/IAI/app/views/database/response.json')
 
@@ -28,7 +31,7 @@ def get_role():
     user_attribute = get_user_cas_attributes()
     email = user_attribute.mail[0]
     name = user_attribute.display_name[0]
-    messages[0]['content'] = "Welcome {}, I am Vandyck chatbot, at your service.".format(name)
+    messages[0]['content'] = "Welcome {}, I am Felix chatbot, at your service.".format(name)
     return render_template('chatbot.html', messages=messages)
 
 @blueprint.route('/chatbot', methods=['POST'])
@@ -50,29 +53,52 @@ def add_role():
             'sentBy': 'Bot',
             'content': 'Sorry your message is inappropriate. Mind your words.' 
         })
-    else:
-        X_train, input_message = model.tf_idf(message)
-        svm_pred = model.svm(X_train, y, input_message)
-        nb_pred = model.naive_bayes(X_train, y, input_message)
-        dt_pred = model.decision_tree(X_train, y, input_message)
-        predictions = list(chain(svm_pred, nb_pred, dt_pred))
-        result = model.most_common_pred(predictions)
 
-        # Callback Intent
-        if not result:
-            messages.append({
-                'sentBy': 'Bot',
-                'content': 'Sorry, I could not understand you.'
-            })
+        return render_template(
+                'chatbot.html', 
+                messages=messages
+            )
 
-            return render_template('chatbot.html', messages=messages)
+    if messages[-1]["tag"] in HOTEL:
+        pass
 
-        intentions = responses[result]
-        random_response = random.choice(intentions)
+    X_train, input_message = model.tf_idf(message)
+    svm_pred = model.svm(X_train, y, input_message)
+    nb_pred = model.naive_bayes(X_train, y, input_message)
+    dt_pred = model.decision_tree(X_train, y, input_message)
+    predictions = list(chain(svm_pred, nb_pred, dt_pred))
+    result = model.most_common_pred(predictions)
 
+    # Accomodations
+    if result == 'accommodation':
+
+        hostel = random.choice(responses[result])
+        hostel_recommend = random.choice(responses[result][hostel])
         messages.append({
             'sentBy': 'Bot',
-            'content': random_response
+            'content': hostel_recommend
         })
+
+        return render_template(
+                'chatbot.html', 
+                messages=messages
+            )
+
+    # Callback Intent
+    if not result:
+        messages.append({
+            'sentBy': 'Bot',
+            'content': 'Sorry, I could not understand you.'
+        })
+
+        return render_template('chatbot.html', messages=messages)
+
+    intentions = responses[result]
+    random_response = random.choice(intentions)
+
+    messages.append({
+        'sentBy': 'Bot',
+        'content': random_response
+    })
 
     return render_template('chatbot.html', messages=messages)

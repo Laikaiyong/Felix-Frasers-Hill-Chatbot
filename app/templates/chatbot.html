@@ -50,12 +50,16 @@
         {% if message.sentBy == 'Bot' %}
         <div class="bot-chat">
             <div class="card bot-response card text-white bg-primary mb-3">
-                <!-- <h6 class="card-title h6">Bot</h6> -->
                 {% if "/plan" in message.content %}
                 <p class="card-text">Click to view travel plans:</p>
                 <a target="_blank" href="{{ message.content }}">
                     <button type="button" class="btn btn-info nav-link btn-sm border border-info border-5">View</button>
                 </a>
+                {% elif "This is the list of the accomodations." == message.content %}
+                <p class="card-text">{{ message.content }}</p>
+                    {% for option in hotel_options %}
+                    <button class="btn btn-dark">{{ option }}</button>
+                    {% endfor %}
                 {% else %}
                 <p class="card-text">{{ message.content }}</p>
                 {% endif %}
@@ -64,7 +68,6 @@
         {% else %}
         <div class="user-chat">
             <div class="card user-response bg-light mb-3">
-                <!-- <h6 class="card-title h6 usernames">{{ name }}</h6> -->
                 <p class="card-text">{{ message.content }}</p>
             </div>
         </div>
