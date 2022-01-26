@@ -58,6 +58,15 @@ def add_role():
         predictions = list(chain(svm_pred, nb_pred, dt_pred))
         result = model.most_common_pred(predictions)
 
+        # Callback Intent
+        if not result:
+            messages.append({
+                'sentBy': 'Bot',
+                'content': 'Sorry, I could not understand you.'
+            })
+
+            return render_template('chatbot.html', messages=messages)
+
         intentions = responses[result]
         random_response = random.choice(intentions)
 

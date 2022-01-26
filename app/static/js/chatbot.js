@@ -10,6 +10,8 @@ $(document).ready(function() {
 			url : '/chatbot',
 			success: function(response) {
 				$("body").html(response);
+				const conversationDiv = document.getElementById('conversation');
+				conversationDiv.scrollTop = conversationDiv.scrollHeight;
 			},
 		})
         clearChat();

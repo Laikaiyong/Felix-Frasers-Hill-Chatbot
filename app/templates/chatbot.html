@@ -52,8 +52,9 @@
             <div class="card bot-response card text-white bg-primary mb-3">
                 <!-- <h6 class="card-title h6">Bot</h6> -->
                 {% if "/plan" in message.content %}
+                <p class="card-text">Click to view travel plans:</p>
                 <a target="_blank" href="{{ message.content }}">
-                    <button type="button" class="btn btn-info nav-link btn-sm border border-info border-5">Plan</button>
+                    <button type="button" class="btn btn-info nav-link btn-sm border border-info border-5">View</button>
                 </a>
                 {% else %}
                 <p class="card-text">{{ message.content }}</p>
