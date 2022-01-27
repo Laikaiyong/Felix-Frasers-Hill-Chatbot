@@ -33,11 +33,12 @@ class SelfModel:
     def _get_data(self):
         # Read data and process
         excel_data = pd.ExcelFile('/Users/USER/Downloads/IAI/app/algorithm/database/data.xlsx')
-        unprocessed_data = pd.read_excel(excel_data, 'Train')
+        unprocessed_data = pd.read_excel(excel_data, 'Data')
 
         # X, y
         X = unprocessed_data['message'].tolist()
         y = unprocessed_data['intent']
+
         unique_y = np.unique(y)
 
         return {
@@ -164,6 +165,17 @@ class SelfModel:
         sentence = self._recreate_sentence(no_sw_msg)
         return sentence
     
+    def print_metrics(self, name, model_score, accuracy, precision, recall):
+        print(
+            f"""
+            Model Name: {name}
+            Model Score: {model_score}
+            Accuracy Score: {accuracy}
+            Precision Score: {precision}
+            Recall Score: {recall}
+            """
+        )
+    
 # TensorFlow + Scikitlearn dependency algorithm
 class FinalModel(SelfModel):
     def __init__(self):
@@ -180,7 +192,7 @@ class FinalModel(SelfModel):
                             max_iter=5, tol=None
                           )
         
-        self.naive_baye_model = MultinomialNB()
+        self.naive_bayes_model = MultinomialNB()
         self.tree_model = DecisionTreeClassifier()
 
     def bag_of_words(*args):
@@ -215,7 +227,7 @@ class FinalModel(SelfModel):
     
     # Naive bayes multinomial 
     def naive_bayes(self, train_data, y, input_words):
-        nb_model = self.naive_baye_model.fit(train_data, y)
+        nb_model = self.naive_bayes_model.fit(train_data, y)
         nb_pred = nb_model.predict(input_words)
 
         return nb_pred
