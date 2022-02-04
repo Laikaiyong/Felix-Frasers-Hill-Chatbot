@@ -60,6 +60,15 @@
                     {% for option in hotel_options %}
                     <button class="btn btn-dark">{{ option }}</button>
                     {% endfor %}
+                {% elif "Google Map" in message.content %}
+                <iframe
+                    width="450"
+                    height="450"
+                    style="border:0"
+                    loading="lazy"
+                    allowfullscreen
+                    src="{{ message.url }}}">
+                    </iframe>
                 {% else %}
                 <p class="card-text">{{ message.content }}</p>
                 {% endif %}

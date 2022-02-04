@@ -1,5 +1,6 @@
 from app.views import blueprint
 from app.algorithm import FinalModel
+from app.maps import location_url
 
 import json
 import random
@@ -41,7 +42,8 @@ def add_role():
     messages.append(
         {
             'sentBy': 'User',
-            'content': message
+            'content': message,
+            'tag': ''
         }
     )
 
@@ -58,8 +60,8 @@ def add_role():
                 'chatbot.html', 
                 messages=messages
             )
-
-    if messages[-1]["tag"] in HOTEL:
+    
+    if messages[-1]["tag"]:
         pass
 
     X_train, input_message = model.tf_idf(message)
@@ -71,12 +73,13 @@ def add_role():
 
     # Accomodations
     if result == 'accommodation':
+        pass
 
-        hostel = random.choice(responses[result])
-        hostel_recommend = random.choice(responses[result][hostel])
+    if result == 'ac_location':
         messages.append({
             'sentBy': 'Bot',
-            'content': hostel_recommend
+            'content': responses[result],
+            'url': location_url("Green Acres")
         })
 
         return render_template(

@@ -31,6 +31,7 @@ class SelfModel:
 
     # Training Data
     def _get_data(self):
+        # TODO: Change excel File location based on your directory
         # Read data and process
         excel_data = pd.ExcelFile('/Users/USER/Downloads/IAI/app/algorithm/database/data.xlsx')
         unprocessed_data = pd.read_excel(excel_data, 'Data')

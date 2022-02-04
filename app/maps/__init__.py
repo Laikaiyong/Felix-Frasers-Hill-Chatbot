@@ -1,0 +1,1 @@
+from app.maps.map import location_url
