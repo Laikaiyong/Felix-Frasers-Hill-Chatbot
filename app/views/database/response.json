@@ -63,116 +63,201 @@
         "Visit the Jeriau Waterfalls if you want to picnic with your family or you just wish to find a location for swimming.",
         "Take a photograph of the beautiful flowers that are grown all over Fraser's Hill."
     ],
-    "accommodation": [
-        "This is the list of the accomodations.="
-    ],
-    "ac_location":{
-        "Shahzan Inn": [
-            "You can live in Shahzan Inn",
-            ""
-        ],
-        "Puncak Inn": [
-            ""
-        ],
-        "The Pines": [
-            ""
-        ],
-        "Silverpark Resort": [
-            ""
-        ],
-        "Sarang by the Brook": [
-            ""
-        ]
+    "accommodation": 
+        "This is the list of the accomodations.",
+    "ac_info":{
+        "Shahzan Inn": 
+            "Shahzan Inn is a budget hotel besides Fraser's Hill's town center which is perched on a hill slope opposite to the golf course",
+        "Puncak Inn":
+            "Puncak Inn is built in 1968 with affordable price in Fraser's Hill's town center that faces the clock tower.",
+        "The Pines":
+            "The Pines is a hidden sanctuary that allows you to take a break from the hectic city lifestyle and indulge in the Nature's stunning view.",
+        "Silverpark Resort":
+            "Silverpark Resort is perchedd on a hill top off Lady Maxwell Road that provides incredible panoramic view due to it's elevated position",
+        "Green Acres":
+            "Green Acres allows you to enjoy the charm of English countryside and architecture with tranquil rainforect views."
     },
+    "ac_location":
+        "Google Map",
     "ac_roomtype":{
-        "Shahzan Inn": [
-            "You can live in Shahzan Inn",
-            ""
-        ],
-        "Puncak Inn": [
-            ""
-        ],
-        "The Pines": [
-            ""
-        ],
-        "Silverpark Resort": [
-            ""
-        ],
-        "Sarang by the Brook": [
-            ""
-        ]
+        "Shahzan Inn": 
+            "There are three room types - Garden view (2 pax), Golf view (2 pax) and Twin room (2 pax).",
+        "Puncak Inn":
+            "There are four room types - Standard room (2 pax), Deluxe room (2 pax), Family room (2 pax) and Junior",
+        "The Pines":
+            "There is a room type - Three-bedroom apartment (3 pax).",
+        "Silverpark Resort":
+            "There are two room types - Two bedroom (4 pax) and Three bedroom (6 pax).",
+        "Green Acres":
+            "There are five room types - Whole bungalow (15 pax), Acacia room (4 pax), Aster Family Suite (6 pax), Oak room (3 pax), Frangipani room (4 pax)."
     },
     "ac_price":{
-        "Shahzan Inn": [
-            "You can live in Shahzan Inn",
-            ""
-        ],
-        "Puncak Inn": [
-            ""
-        ],
-        "The Pines": [
-            ""
-        ],
-        "Silverpark Resort": [
-            ""
-        ],
-        "Sarang by the Brook": [
-            ""
-        ]
+        "Shahzan Inn":
+            "Garden view - RM 146, Golf view - RM 281, Twin room - MR 179",
+        "Puncak Inn":
+            "Standard room - RM 150, Deluxe room - RM 170, Family room - RM 210, Junior suite - RM 230",
+        "The Pines":
+            "Three-bedroom apartment - RM 580",
+        "Silverpark Resort":
+            "Two bedroom - estimated RM 321, Three bedroom - estimated RM 469 ",
+        "Green Acres":
+            "Whole bungalow - RM 1599, Acacia room - RM 380, Aster family suite - RM 750, Oak room - RM 260, Frangipani room - RM 350"
     },
     "ac_facilities":{
-        "Shahzan Inn": [
-            "You can live in Shahzan Inn",
-            ""
-        ],
-        "Puncak Inn": [
-            ""
-        ],
-        "The Pines": [
-            ""
-        ],
-        "Silverpark Resort": [
-            ""
-        ],
-        "Sarang by the Brook": [
-            ""
-        ]
+        "Shahzan Inn":
+            "Bicycle rental, car park, 24-hour front desk, express check-in/out, golf course and tennis court are available.",
+        "Puncak Inn":
+            "Airport transfer, bicycle rental, car park, shuttle service, golf course and fitness center are available.",
+        "The Pines":
+            "Bicycle rental, car park, steamroom, restaurants, daily housekeeping and smoke-free facilities are available.",
+        "Silverpark Resort":
+            "Car park and wheelchair access are available.",
+        "Green Acres":
+            "WiFi, car park, restaurants, kitchen and smoke-free facilities are available."
     },
     "ac_review":{
-        "Shahzan Inn": [
-            "You can live in Shahzan Inn",
-            ""
-        ],
-        "Puncak Inn": [
-            ""
-        ],
-        "The Pines": [
-            ""
-        ],
-        "Silverpark Resort": [
-            ""
-        ],
-        "Sarang by the Brook": [
-            ""
-        ]
+        "Shahzan Inn":
+            "Shahzan Inn is rated 7.1/10 from visitors.",
+        "Puncak Inn":
+            "Puncak Inn is rated 7.6/10 from visitors.",
+        "The Pines":
+            "The Pines is rated 7.5/10 from visitors.",
+        "Silverpark Resort":
+            "Silverpark Resort is rated 7.5/10 from visitors.",
+        "Green Acres":
+            "Green Acres is rated 8.4/10 from visitors."
     },
     "ac_landmark":{
         "Shahzan Inn": [
-            "You can live in Shahzan Inn",
-            ""
+            "The Paddock is 800 m from Shahzan Inn.",
+            "Scott's Pub & Restaurant is 270 m (2 minutes) from Shahzan Innt."
         ],
         "Puncak Inn": [
-            ""
+            "Scott's Pub & Restaurant is 150 m (1 minute) from Puncak Inn",
+            "Abu Suradi Trail is 350 m (2 minute) from Puncak Inn"
         ],
         "The Pines": [
-            ""
+            "Fraser's Hill golf course id 1.3 km (4 minutes) from The Pines.",
+            "Scott's Pub & Restaurant is 1.5 km (5 minutes) from The Pines."
         ],
         "Silverpark Resort": [
-            ""
+            "The Paddock is 1.4 km (5 minutes) from Silverpark Resort",
+            "Pine Tree Trail is 1.7 km (6 minutes) from Silverpark Resort"
         ],
-        "Sarang by the Brook": [
-            ""
+        "Green Acres": [
+            "Fraser's Hill golf course is 2.8 km (9 minutes) from Green Acres.",
+            "The Paddock is 3.4 km (11 minutes) from Green Acres."
+        ]
+    },
+    "ac_booking":
+        "You may proceed to this link to book and check the availability of the rooms.",
+    "ac_clear":{
+        "Shahzan Inn": 
+            "You can try Shahzan Inn. Refer to link: ",
+        "Puncak Inn": 
+            "You can try Puncak Inn. Refer to link: ",
+        "The Pines":
+            "You can try The Pines. Refer to link: ",
+        "Silverpark Resort": 
+            "You can try Silverpark Resort. Refer to link: ",
+        "Green Acres": 
+            "You can try Green Acres. Refer to link: "
+    },
+    "ac_image":
+        "Hotel Image",
+    "ac_room":{
+        "Shahzan Inn":{
+            "Images":[
+                "http://pahangtourism.org.my/media/k2/items/cache/28232e87509dedeadc0cd2b6a94ea3f5_XL.jpg?t=1568794058",
+                "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0d/72/f7/8c/double-room-golf-view--v14476217.jpg?w=600&h=300&s=1"
+            ],
+            "Description":[
+                "The room provides inhouse movies, desk, hair dryer, ironing facilities, television, bathtub, shower, minibar, balcony or terrace, fan and coffee or tea maker.",
+                "The golf view room faces the golf course, two single beds are available for most rooms whereas Queen size beds are limited to certain rooms.",
+                "The garden view room faces the garden, two single beds are available for all rooms."
+            ]
+        },
+        "Puncak Inn":{
+            "Images":[
+                "https://www.fraserhill.info/img/puncak-inn-standard1.jpg",
+                "https://www.fraserhill.info/img/puncak-inn-family3.jpg"
+            ],
+            "Description":[
+                "The room provides coffee or tea maker, desk, hair dryer, free WLAN and LAN Internet Access, ironing facilities, on-demand movie and shower",
+                "The room provides a queen-sized bed, television, and water heater.",
+                "The room provides one single bed with couch and 2 windows for immaculate view during the stay"
+            ]
+        },
+        "The Pines":{
+            "Images":[
+                "https://q-xx.bstatic.com/xdata/images/hotel/max500/268949987.jpg?k=d4a02898c2ef7d06ec7858fff529efda872a9d8a7af49785460bdd7ae3ded5c9&o=",
+                "http://static.asiawebdirect.com/m/kl/hotels/malaysia-hotels-net/thepines/rooms/hotelBanner/rooms.jpg"
+            ],
+            "Description":[
+                "The room provides bathrooms, bathtub, balcony or terrace, desk, coffee or tea maker, fan, dining table, fulll kitchen and kichenette, refrigerator, shower, sofa, television, towels, toiletries and trash cans. ",
+                "The room provides 2 single bed for visitors and a wide French Window with terrace. ",
+                "The room provides one queen bed that is suitable to be booked by families with French Window at the side facing mountains. "
+            ]
+        },
+        "Silverpark Resort":{
+            "Images":[
+                "https://www.fraserhill.info/img/frasers-silverpark-resort-studio-apartment.jpg",
+                "https://pix1.agoda.net/hotelimages/931588/0/52a1214e720d99b8c0199f578d7ccdd7.jpg"
+            ],
+            "Description":[
+                "The room provides well-equipped kitchenette, bathroom, television, desk, balcony or terrace, hair dryers, toiletries, refrigerator and Wi-Fi.",
+                "The room provides one king size bed with a big wardrobe and living room just in front of the bed, with wide windows by the bed.",
+                "The room a studio decoration with 2 king size bed and one living area, dining table and well-equipped kitchenette."
+                
+            ]
+        },
+        "Green Acres":{
+            "Images":[
+                "https://cf.bstatic.com/xdata/images/hotel/max1024x768/225665019.jpg?k=62d7f8de5ba388791082270525622e8435a7a9d180664950e5e5d22819d228a8&o=&hp=1",
+                "https://q-xx.bstatic.com/xdata/images/hotel/840x460/258174998.jpg?k=f1e4c30e28abe1538f6fa8155ff8237f1ff0ef4e5b9cebbbeae735dfed1f8388&o="
+            ],
+            "Description":[
+                "The room provides bathroom, garden or terrace, shared kitchen, Wi-Fi, share lounge and TV area, board games or puzzles and toiletries",
+                "The room provides a double bed and a large window to enjoy the view in the morning.",
+                "The bungalow consists of nine single beds, a Queen sized bed and two king sized beds." 
+            ]
+        }
+    },
+    "ac_restaurant":
+        "Do you prefer onsite or offsite?",
+    "ac_fnb_onsite":{
+        "Shahzan Inn":
+            "A café is available within the hotel. The restaurant serves a variety of local, asian and western cuisines including steamboats. It can gets very crowded on weekends or holiday period with group functions but still able to provide adequate level of service.",
+        "Puncak Inn":
+            "Unfortunately, no on-site food are available for visitors.",
+        "The Pines":
+            "The restaurant serves simple local and western dishes for visitors.",
+        "Silverpark Resort":
+            "Unfortunately, no on-site food are available for visitors.",
+        "Green Acres":
+            "The café at the hotel serves barbeque, western cuisine and pastries."
+    },
+    "ac_fnb_offsite":{
+        "Shahzan Inn":[
+            "Scott's Pub & Restaurant is a western restaurant that is located at Jalan Genting which is 200 metres away from Shahzan Inn.",
+            "Kedai Makanan Hamzah serves Malaysian cuisines especially for breakfast is located at Jalan Lady Guillemard which is 400 metres away from Shahzan Inn"
+        ],
+        "Puncak Inn":[
+            "Arzed Restaurant is at No. 5 Food Garden Pine Tree Road which is 0.4 km away from Puncak Inn. It serves Asian and Grill cuinsines that is Halal certified.",
+            "Kedai Makanan Hamzah which is located at Jalan Lady Guillemard, 0.4 km away from Puncak Inn serves Malaysian cuinsines that is affordable and delicious."
+        ],
+        "The Pines":[
+            "Scott's Pub and Restaurant is located 130 m and approximately 1 minute away from the hotel.",
+            "Ye Olde Smokehouse that serves British cuisines is located 3.1 km away from The Pines Resort."
+        ],
+        "Silverpark Resort":[
+            "Tea House Restaurant & Cafe that is located 0.3 km away from Silverpark Resort at Jalan Lady Maxwell beside Majlis Bukit Fraser.",
+            "Fraser Hill Curry House which serves Indian cuisines is located 0.4 km away from Silverpark Resort at Jalan Pokok Pine."
+        ],
+        "Green Acres":[
+            "Pines Café which is 3.9 km away from Green Acres provides the best halal Chinese food especially the claypot curry fish head, sweet and sour chicken and steamboat cuisine.",
+            "Green Roses located 3.5 km away from Green Acres features the best Nasi Lemak which is a must try that solds out as early as 9 a.m., buckle up to get a taste of it."
         ]
     }
-}
+}     
     

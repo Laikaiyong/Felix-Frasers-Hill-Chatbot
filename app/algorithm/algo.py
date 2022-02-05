@@ -37,7 +37,7 @@ class SelfModel:
         unprocessed_data = pd.read_excel(excel_data, 'Data')
 
         # X, y
-        X = unprocessed_data['message'].tolist()
+        X = unprocessed_data['message'].values.astype('U')
         y = unprocessed_data['intent']
 
         unique_y = np.unique(y)
@@ -223,6 +223,7 @@ class FinalModel(SelfModel):
     def svm(self, train_data, y, input_words):
         svm_model = self.svm_model.fit(train_data, y)
         svm_pred = svm_model.predict(input_words)
+        print("SVM ", svm_pred)
 
         return svm_pred
     
@@ -230,6 +231,7 @@ class FinalModel(SelfModel):
     def naive_bayes(self, train_data, y, input_words):
         nb_model = self.naive_bayes_model.fit(train_data, y)
         nb_pred = nb_model.predict(input_words)
+        print("NB ", nb_pred)
 
         return nb_pred
 
@@ -237,11 +239,15 @@ class FinalModel(SelfModel):
     def decision_tree(self, train_data, y, input_words):
         dt_model = self.tree_model.fit(train_data, y)
         dt_pred = dt_model.predict(input_words)
+        print("DT ", dt_pred)
 
         return dt_pred
     
     def most_common_pred(self, pred_list):
-        return max(set(pred_list), key=pred_list.count)
+        unique_pred = set(pred_list)
+        if len(unique_pred) == 3:
+            return pred_list[0]
+        return max(unique_pred, key=pred_list.count)
 
 # Example Usage + Prediction
 hi = FinalModel()

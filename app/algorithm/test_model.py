@@ -22,13 +22,15 @@ tokenizer = Pipeline(
                 ]
             )
 X = tokenizer.fit_transform(X).toarray()
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.1)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.1, random_state=42)
 
 # SVM evaluation
 svm_model = SGDClassifier(
-                loss='hinge', penalty='l2',
-                alpha=1e-3, random_state=42,
-                max_iter=5, tol=None
+                loss='hinge', 
+                penalty='l2',
+                alpha=1e-3,
+                max_iter=5, 
+                tol=None
             ).fit(X_train, y_train)
 svm_y_preds = svm_model.predict(X_test)
 svm_score = svm_model.score(X_test, y_test)

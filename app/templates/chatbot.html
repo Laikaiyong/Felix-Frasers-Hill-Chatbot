@@ -11,24 +11,12 @@
     <link href="../static/css/chatbot.css" rel="stylesheet" />
 
     <!-- Google Font -->
-    <link 
-    rel="preconnect" 
-    href="https://fonts.googleapis.com">
-    <link 
-    rel="preconnect" 
-    href="https://fonts.gstatic.com" 
-    crossorigin>
-    <link 
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap" 
-    rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap" rel="stylesheet">
     
     <!-- Font Awesome -->
-    <link 
-    rel="stylesheet" 
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" 
-    integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" 
-    crossorigin="anonymous" 
-    referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <!-- Header -->
@@ -42,6 +30,9 @@
           alt="">
           Chatbot
         </a>
+        <div class="d-flex mr-3">
+            <i class="fas fa-info-circle text-info h4 mt-2" type="button" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true" title='<b>Location</b><br/>Destinations, Address, Sites<br/><b>Fees</b><br/>Money, Costs, Affordable<br/><b>Prepare</b><br/>Prepare Items<br/><b>Plan</b><br/>Travel Routine, Itinerary<br/><b>Activities</b><br/>Interesting Activities<br/><b>Accommodation</b><br/>Hotel, Homestay, Resort<br/><b>Room type</b><br/>Room Pax, Room Category<br/><b>Price</b><br/>Room price/costs/payment<br/><b>Landmark</b><br/>Attraction/Restaurant nearby<br/><b>Booking</b><br/>Book room, Reservation<br/><b>Facilities</b><br/>Amenities, Services<br/><b>Review</b><br/>Ratings, Surveys'></i>
+        </div>
     </nav>
 
     <!-- Messages / Chat bubble areas -->
@@ -49,26 +40,39 @@
         {% for message in messages %}
         {% if message.sentBy == 'Bot' %}
         <div class="bot-chat">
-            <div class="card bot-response card text-white bg-primary mb-3">
+            <div class="card bot-response card bg-light mb-3">
                 {% if "/plan" in message.content %}
                 <p class="card-text">Click to view travel plans:</p>
                 <a target="_blank" href="{{ message.content }}">
                     <button type="button" class="btn btn-info nav-link btn-sm border border-info border-5">View</button>
                 </a>
-                {% elif "This is the list of the accomodations." == message.content %}
+
+                {% elif "This is the list of the accomodations." == message.content or "Do you prefer onsite or offsite?" == message.content %}
                 <p class="card-text">{{ message.content }}</p>
-                    {% for option in hotel_options %}
-                    <button class="btn btn-dark">{{ option }}</button>
+                    {% for option in options %}
+                    <button class="m-2 btn btn-dark text-white option-btn">{{ option }}</button>
                     {% endfor %}
-                {% elif "Google Map" in message.content %}
-                <iframe
-                    width="450"
-                    height="450"
-                    style="border:0"
-                    loading="lazy"
-                    allowfullscreen
-                    src="{{ message.url }}}">
-                    </iframe>
+
+                {% elif "Google Map" == message.content %}
+                <iframe width="450" height="450" style="border:0" loading="lazy" allowfullscreen src="{{ message.url }}}"></iframe>
+
+                {% elif message.room_image %}
+                    <p class="card-text mb-1">{{ message.first_text }}</p>
+                    {% for number in range(2)%}
+                    {% set desc = message.content[loop.index-1] %}
+                    {% set room = message.room_image[loop.index-1] %}
+                    <p class="my-1 card-text">{{ desc }}</p>
+                    <img src="{{ room }}" width="350" alt="">
+                    {% endfor %}
+
+                {% elif "Hotel Image" == message.content %}
+                <img src="{{ message.url }}" width="350" alt="">
+
+                {% elif "You may proceed to this link to book and check the availability of the rooms." == message.content 
+                        or ("You can try " in message.content and "Refer to link: " in message.content) %}
+                <p class="card-text">{{ message.content }}</p>
+                <a class="btn btn-dark m-1" href="{{ message.url }}" target="_blank">Link</a>
+
                 {% else %}
                 <p class="card-text">{{ message.content }}</p>
                 {% endif %}
@@ -76,7 +80,7 @@
         </div>
         {% else %}
         <div class="user-chat">
-            <div class="card user-response bg-light mb-3">
+            <div class="card user-response text-white bg-primary mb-3">
                 <p class="card-text">{{ message.content }}</p>
             </div>
         </div>
@@ -115,12 +119,13 @@
         </div>
     </form>
     
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+
     <!-- Jquery -->
-    <script 
-    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" 
-    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" 
-    crossorigin="anonymous" 
-    referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <script src="../static/js/chatbot.js"></script>
 </body>
