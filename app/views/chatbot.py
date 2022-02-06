@@ -156,7 +156,6 @@ def add_role():
     predictions = list(chain(svm_pred, nb_pred, dt_pred))
     result = model.most_common_pred(predictions)
 
-        
     if message == "Onsite":
         result = 'ac_fnb_onsite'
     elif message == "Offsite":
@@ -180,7 +179,7 @@ def add_role():
                 options=options
             )
 
-    if accomodation_tag and result not in AC_RELATED:
+    if accomodation_tag and result not in AC_RELATED and result not in [item for item in GENERAL if item not in ['fees', 'location']]:
         match [result]:
 
             case [('ac_location' | 'location')]:
