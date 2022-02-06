@@ -2,3 +2,8 @@
 .env
 __pycache__/
 *.py[cod]
+src
+app/__pycache__
+app/algorithm/__pycache__
+app/maps/__pycache__
+app/views/__pycache__
