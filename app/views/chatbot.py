@@ -160,9 +160,7 @@ def add_role():
         result = 'ac_fnb_onsite'
     elif message == "Offsite":
         result = "ac_fnb_offsite"
-    elif re.sub(r'[^\w\s]', '', message.lower()) in ['hotel', 'hostel', 'homestay', 'resort']:
-        result = 'accommodation'
-    elif re.sub(r'[^\w\s]', '', message.lower()) in ['where is the hotel', 'where is the homestay', 'where is the resort']:
+    elif re.sub(r'[^\w\s]', '', message.lower()) in ['where', 'where is it', 'where is the hotel', 'where is the homestay', 'where is the resort']:
         result = 'ac_location'
 
     # Accomodations
