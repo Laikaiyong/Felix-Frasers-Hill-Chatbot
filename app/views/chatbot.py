@@ -22,7 +22,15 @@ HOTELS = [
     "Puncak Inn",
     "The Pines",
     "Silverpark Resort",
-    "Green Acres"
+    "Green Acres",
+    "80 Colonie",
+    "The Hill",
+    "The Smokehouse"
+]
+
+LANDMARK_TYPE = [
+    'Natural',
+    'Architectural'
 ]
 
 GENERAL = [
@@ -34,14 +42,17 @@ GENERAL = [
     "funfacts",
     "location",
     "fees",
-    "prepare",
-    "ac_restaurant"
+    "prepare"
+]
+AC_SPECIAL = [
+    "ac_restaurant",
+    "ac_review",
+    "ac_landmark",
+    "ac_booking"
 ]
 
-AC_RELATED = [
+AC_REMAIN = [
     "ac_roomtype",
-    "ac_facilities",
-    "ac_review",
     "ac_fnb_onsite"
 ]
 
@@ -55,7 +66,13 @@ AC_HOTEL_IMAGES = {
         "Silverpark Resort": 
             "https://www.fraserhill.info/img/frasers-silverpark-resort-entrance.jpg",
         "Green Acres": 
-            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/236464932.jpg?k=25717e35db0795538c371cac3a9f8528d8cf728766679cb29bd986bf41c7fa33&o=&hp=1"
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/236464932.jpg?k=25717e35db0795538c371cac3a9f8528d8cf728766679cb29bd986bf41c7fa33&o=&hp=1",
+        "80 Colonie":
+            "https://80colonie.com/wp-content/uploads/2020/07/B2FFD16A-5431-46CC-A9E5-DD35194F3FA1-768x768.jpg",
+        "The Hill":
+            "https://a0.muscache.com/im/pictures/43b869c2-624d-44c6-ba21-8308f458bdcc.jpg?aki_policy=large",
+        "The Smokehouse":
+            "https://media-cdn.tripadvisor.com/media/photo-s/09/53/a7/9c/the-smokehouse-hotel.jpg"
 }
 
 AC_URL = {
@@ -68,24 +85,33 @@ AC_URL = {
     "Silverpark Resort":
         "http://www.silverparkresort.com/",
     "Green Acres":
-        "https://www.greenacresfraser.com/"
+        "https://www.greenacresfraser.com/",
+    "80 Colonie":
+        "https://80colonie.com/",
+    "The Hill":
+        "https://web.facebook.com/TheHillatFraserHill/?_rdc=1&_rdr",
+    "The Smokehouse":
+        "https://thesmokehouse.my/ye-olde-smokehouse-frasers-hill/"
 }
 
-AC_BOOK_URL = {
-    "Shahzan Inn":
-        "https://www.shahzaninn-fraserhill.com/",
-    "Puncak Inn":
-        "http://www.puncakinn.pkbf.gov.my/",
-    "The Pines":
-        "https://www.agoda.com/the-pines-resort-fraser-s-hill-malaysia/hotel/kuala-lumpur-my.html?cid=1844104&checkIn=2022-01-27&los=1&travellerType=1",
-    "Silverpark Resort":
-        "https://www.tripadvisor.com.my/Hotel_Review-g303992-d1135358-Reviews-Fraser_s_Silverpark_Resort-Bukit_Fraser_Raub_District_Pahang.html",
-    "Green Acres":
-        "https://www.greenacresfraser.com/fraserhill"
-}
+AC_REVIEW = [
+    "Rating and Review at Agoda",
+    "Rating and Review at Airbnb",
+    "Rating and Review at Trivago",
+    "Rating and Review at Booking.com",
+    "Rating and Review at Google"
+]
+
+AC_BOOKING = [
+    "Booking at Agoda",
+    "Booking at Airbnb",
+    "Booking at Trivago",
+    "Booking at Booking.com",
+    "Booking at Hotel-Website",
+]
 
 messages_file = open('/Users/USER/Downloads/IAI/app/views/database/chatbot_init.json')
-response_file = open('/Users/USER/Downloads/IAI/app/views/database/response.json')
+response_file = open('/Users/USER/Downloads/IAI/app/views/database/response.json', encoding="utf8")
 
 messages = json.load(messages_file)['messages']
 responses = json.load(response_file)
@@ -147,7 +173,45 @@ def add_role():
         return render_template(
                 'chatbot.html', 
                 messages=messages
-            )       
+            )
+    elif message in AC_REVIEW and accomodation_tag:
+        platform = message.split()[-1]
+        rating = responses['ac_review'][accomodation_tag][platform]['Rating']
+        review = responses['ac_review'][accomodation_tag][platform]['Review']
+        messages.append({
+            'sentBy': 'Bot',
+            'rating': rating,
+            'review': review
+        })
+
+        return render_template(
+                'chatbot.html', 
+                messages=messages,
+            )
+    elif message in AC_BOOKING and accomodation_tag:
+        platform = message.split()[-1]
+        messages.append({
+            'sentBy': 'Bot',
+            'content': f'Please proceed you booking at {platform}',
+            'url': responses['ac_booking'][accomodation_tag][platform],
+        })
+
+        return render_template(
+                'chatbot.html', 
+                messages=messages,
+            )
+    elif message in LANDMARK_TYPE and accomodation_tag:
+        bot_responses = responses['ac_landmark'][accomodation_tag][message]
+        pick_one = random.choice(bot_responses)
+        messages.append({
+            'sentBy': 'Bot',
+            'content': pick_one
+        })
+
+        return render_template(
+                'chatbot.html', 
+                messages=messages,
+            )   
 
     X_train, input_message = model.tf_idf(message)
     svm_pred = model.svm(X_train, y, input_message)
@@ -165,7 +229,7 @@ def add_role():
 
     # Accomodations
     if result == 'accommodation':
-        options = HOTELS
+        hotels = HOTELS
         messages.append({
             'sentBy': 'Bot',
             'content': responses[result]
@@ -174,10 +238,10 @@ def add_role():
         return render_template(
                 'chatbot.html', 
                 messages=messages,
-                options=options
+                hotels=hotels
             )
 
-    if accomodation_tag and result not in AC_RELATED and result not in [item for item in GENERAL if item not in ['fees', 'location']]:
+    if accomodation_tag and result not in AC_REMAIN and result not in AC_SPECIAL and result not in [item for item in GENERAL if item not in ['fees', 'location']]:
         match [result]:
 
             case [('ac_location' | 'location')]:
@@ -191,13 +255,6 @@ def add_role():
                 messages.append({
                     'sentBy': 'Bot',
                     'content': responses['ac_price'][accomodation_tag]
-                })
-
-            case ['ac_booking']:
-                messages.append({
-                    'sentBy': 'Bot',
-                    'content': responses[result],
-                    'url': AC_BOOK_URL[accomodation_tag]
                 })
 
             case ['ac_image']:
@@ -215,12 +272,19 @@ def add_role():
                     'room_image': responses[result][accomodation_tag]['Images']
                 })
 
-            case [('ac_landmark' | 'ac_fnb_offsite')]:
+            case ['ac_fnb_offsite']:
                 bot_responses = responses[result][accomodation_tag]
                 pick_one = random.choice(bot_responses)
                 messages.append({
                     'sentBy': 'Bot',
                     'content': pick_one
+                })
+
+            case ['ac_facilities']:
+                messages.append({
+                    'sentBy': 'Bot',
+                    'content': 'Facilities/Amenities provided',
+                    'facilities': responses[result][accomodation_tag]
                 })
             
             case ['ac_clear']:
@@ -236,14 +300,53 @@ def add_role():
                     'url': AC_URL[accomodation_tag]
                 })
 
-
         return render_template(
                 'chatbot.html', 
                 messages=messages
             )
     
-    if result == 'ac_restaurant' and accomodation_tag:
-        options = ["Onsite", "Offsite"]
+    # Exceptions that must run out of the switch case method
+    if accomodation_tag and result == 'ac_review':
+        review_platforms = list(responses[result][accomodation_tag].keys())
+        messages.append({
+            'sentBy': 'Bot',
+            'content': "Select the platform for respective rating and reviews"
+        })
+
+        return render_template(
+                'chatbot.html', 
+                messages=messages,
+                review_platforms=review_platforms
+            )
+    
+    if accomodation_tag and result == 'ac_landmark':
+        landmark_type = LANDMARK_TYPE
+        messages.append({
+            'sentBy': 'Bot',
+            'content': "Landmark Type"
+        })
+
+        return render_template(
+                'chatbot.html', 
+                messages=messages,
+                landmark_type=landmark_type
+            )
+
+    if accomodation_tag and result == 'ac_booking':
+        booking_platforms = list(responses[result][accomodation_tag].keys())
+        messages.append({
+            'sentBy': 'Bot',
+            'content': "Hotel booking are available at"
+        })
+
+        return render_template(
+                'chatbot.html', 
+                messages=messages,
+                booking_platforms=booking_platforms
+            )
+
+    if accomodation_tag and result == 'ac_restaurant':
+        restaurant_locate = ['Onsite', 'Offsite']
         messages.append({
             'sentBy': 'Bot',
             'content': responses[result]
@@ -252,10 +355,10 @@ def add_role():
         return render_template(
                 'chatbot.html', 
                 messages=messages,
-                options=options
+                restaurant_locate=restaurant_locate
             )
     
-    if result in AC_RELATED:
+    if result in AC_REMAIN:
         messages.append({
             'sentBy': 'Bot',
             'content': responses[result][accomodation_tag]

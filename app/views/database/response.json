@@ -75,7 +75,13 @@
         "Silverpark Resort":
             "Silverpark Resort is perchedd on a hill top off Lady Maxwell Road that provides incredible panoramic view due to it's elevated position",
         "Green Acres":
-            "Green Acres allows you to enjoy the charm of English countryside and architecture with tranquil rainforect views."
+            "Green Acres allows you to enjoy the charm of English countryside and architecture with tranquil rainforect views.",
+        "The Hill": 
+            "The Hill is a garden view suite hotel that is newly refurbished in a modern and minimalist design",
+        "80 Colonie": 
+            "80 Colonie is a walk-down apartment with a great forest and landscaped garden view in Silverpark Resort, Fraser Hill.",
+        "The Smokehouse": 
+            "The Smokehouse invites you to experience the charm of English countryside and its architecture that will make your stay at the Hill Resort truly memorable."
     },
     "ac_location":
         "Google Map",
@@ -89,7 +95,14 @@
         "Silverpark Resort":
             "There are two room types - Two bedroom (4 pax) and Three bedroom (6 pax).",
         "Green Acres":
-            "There are five room types - Whole bungalow (15 pax), Acacia room (4 pax), Aster Family Suite (6 pax), Oak room (3 pax), Frangipani room (4 pax)."
+            "There are five room types - Whole bungalow (15 pax), Acacia room (4 pax), Aster Family Suite (6 pax), Oak room (3 pax), Frangipani room (4 pax).",
+        "The Hill": 
+            "There are two room types - Apartment unit (4 pax) and Apartment unit (6 pax).",
+        "80 Colonie": 
+            "There are two apartment unit type - 2-bedroom apartment (4 pax) and 3-bedroom apartment (8 pax).",
+        "The Smokehouse": 
+            "There are five room types - Standard rooms (2 pax), Standard suites (2 pax), Family suite (3 pax), Executive suites (2 pax), Honeymoon suites (2 pax)."
+
     },
     "ac_price":{
         "Shahzan Inn":
@@ -99,58 +112,387 @@
         "The Pines":
             "Three-bedroom apartment - RM 580",
         "Silverpark Resort":
-            "Two bedroom - estimated RM 321, Three bedroom - estimated RM 469 ",
+            "Two bedroom - estimated RM 321, Three bedroom - estimated RM 469",
         "Green Acres":
-            "Whole bungalow - RM 1599, Acacia room - RM 380, Aster family suite - RM 750, Oak room - RM 260, Frangipani room - RM 350"
+            "Whole bungalow - RM 1599, Acacia room - RM 380, Aster family suite - RM 750, Oak room - RM 260, Frangipani room - RM 350",
+        "The Hill": 
+            "Apartment unit for 4 pax is approximately RM 329 and apartment unit for 6 pax is approximately RM461",
+        "80 Colonie": 
+            "Apartment with Terrace for up to 8 paxes - RM 618, Deluxe Apartment for 4 paxes - RM 760",
+        "The Smokehouse": 
+            "Standard room - estimated RM 308, Standard suites - estimated RM 385, Family suite - estimated RM 495, Executive suites - estimated RM 495, Honeymoon suites - estimated RM 495"
     },
     "ac_facilities":{
-        "Shahzan Inn":
-            "Bicycle rental, car park, 24-hour front desk, express check-in/out, golf course and tennis court are available.",
-        "Puncak Inn":
-            "Airport transfer, bicycle rental, car park, shuttle service, golf course and fitness center are available.",
-        "The Pines":
-            "Bicycle rental, car park, steamroom, restaurants, daily housekeeping and smoke-free facilities are available.",
-        "Silverpark Resort":
-            "Car park and wheelchair access are available.",
-        "Green Acres":
-            "WiFi, car park, restaurants, kitchen and smoke-free facilities are available."
+        "Shahzan Inn":[
+            "Wi-Fi",
+            "Car Park",
+            "24 Hours Front Desk",
+            "Golf Course",
+            "Express Check In and Check Out",
+            "Tennis Court",
+            "Bicycle Rental"
+        ],
+        "Puncak Inn":[
+            "Wi-Fi",
+            "Car Park",
+            "Golf Course",
+            "Airport Transfer",
+            "Gym"
+        ],
+        "The Pines":[
+            "Wi-Fi",
+            "Car Park",
+            "Bicycle Rental"
+        ],
+        "Silverpark Resort":[
+            "Wi-Fi",
+            "Car Park",
+            "Express Check In and Check Out",
+            "Tennis Court"
+        ],
+        "Green Acres":[
+            "Wi-Fi",
+            "Car Park"
+        ],
+        "80 Colonie":[
+            "Car Park"
+        ],
+        "The Hill":[
+            "Wi-Fi",
+            "Car Park"
+        ],
+        "The Smokehouse":[
+            "Wi-Fi",
+            "Car Park"
+        ]  
     },
     "ac_review":{
-        "Shahzan Inn":
-            "Shahzan Inn is rated 7.1/10 from visitors.",
-        "Puncak Inn":
-            "Puncak Inn is rated 7.6/10 from visitors.",
-        "The Pines":
-            "The Pines is rated 7.5/10 from visitors.",
-        "Silverpark Resort":
-            "Silverpark Resort is rated 7.5/10 from visitors.",
-        "Green Acres":
-            "Green Acres is rated 8.4/10 from visitors."
+        "Shahzan Inn":{
+            "Agoda":{
+                "Rating":
+                    "Out of 3511 ratings, Shahzan Inn is rated 7.1 / 10.0 from visitors.",
+                "Review": 
+                    "This was my first time to Fraser Hill but after arriving at Fraser Hill, I knew that I had made the best choice. 1. LOCATION - strategically situated at Fraser Hill \"micro town\". Easy access to restaurants/cafe/mini markets/mosque/clock tower 2. ROOM - very spacious. I requested extra bed (with additional cost) as I stayed with my parents. Extra bed came together with complimentary breakfast. Besides, the room services didnt even forget to include extra towel, hand towel and even the drinking water for the extra bed requested. Water heater worked fine without any faulty. The water heater switch is located outside of the room (since they use keys to access to the rooms, I guess they want to be able to switch off the water heater when customers forgot to turn it off) Room is clean, though the shower looks a bit old I was scared of mosquitoes at first, but none of them showed at night. They do install mosquito netting. I WANT TO SHARE MORE BUT THIS LIMITATION DOESNT ALLOW ME"
+            },
+            "Trivago":{
+                "Rating": 
+                    "Out of 223 ratings, Shahzan Inn is rated 6.7 / 10.0 from visitors.",
+                "Review": 
+                    "We pay RM35 for two persons with twin sharing.It comes with a decent buffet breakfast.The hotel is quite old and it needs a facelift.It is the centre of most hiking trails.But for the price I paid for,I have nothing to complain about"
+            },
+            "Booking.com":{
+                "Rating": 
+                    "Out of 482 ratings, Shahzan Inn is rated 6.3 / 10.0 from visitors.",
+                "Review": 
+                    "Breakfast so good. Not to much options but still worth. Even i came down little late but the food still hot and many."
+            },
+            "Google":{
+                "Rating": 
+                    "Out of 875 ratings, Shahzan Inn is rated 3.6 / 5.0 from visitors.",
+                "Review": 
+                    "The staffs are so nice. I chose room with Golf view. The view is really beautiful especially in the morning. There is a garden & playground nearby to the hotel. I love that garden because of the various type of flowers and kids can play the playground. The hotel is not at the main centre of the hill so, very preferable for those who wanna stay in a very calm place. The only con is the carpet in the room felt like \"kesat\" or didn't wash for months and the balcony is not really clean. If you wanna have a great view of the golf course, if possible please request for 2nd or 3rd floor."
+            }
+        },
+        "Puncak Inn":{
+            "Agoda":{
+                "Rating": 
+                    "Out of 995 ratings, Puncak Inn is rated 7.6/10.0 from visitors.",
+                "Review":
+                    "Excellent location with good service and staffs. A very perfect escapade from the hustle and bustle of city. A great scenic, adventurous ride up in the evening along with that mystic feeling. We came from Singapore but our bike ride from Hatyai to Fraser's Hill was one of most adventurous ones besides Genting & Cameron. We checked in late evening on 11 Feb 2019 and out tireness from long journey gone after we reached our destination at Puncak Inn. The services and great hospitality from the staffs was heartwarming. The surroundings definitely captured our heart. Dinner and buffet breakfast were delicious at Puncak Inn. There is a nearby mamak shop that closes at 11pm to buy some snacks and drinks. Perfect weekend gateway from the searing heat of the city. Great morning walk with the crispiness of the air from the mountains. Last but not least , the staffs did a great job in managing the resorts and are very helpful and accommodative. Gonna bring my children next time, this time driving up to Fraser's Hill."
+            },
+            "Google":{
+                "Rating":
+                    "Out of 331 ratings, Puncak Inn is rated 3.9 / 5.0 from visitors.",
+                "Review":
+                    "Had a good time in colonial hill station, Fraser's Hill. Excellent place for short gateways, relaxing holidays. Activities that you may enjoy doing here are hiking, dining, horse riding, to try archery, golfing, cycling, bird watching, meditate and so on…"
+            }
+        },
+        "The Pines":{
+            "Agoda":{
+                "Rating":
+                    "Out of 81 ratings, Puncak Inn is rated 7.9/10.0 from visitors.",
+                "Review":
+                    "Nice resort for relaxing, Nice resort for family gathering, my children enjoy the surrounding. 3 bedroom, living room, kitchen and dining room, worth it for family budget trip."
+            },
+            "Booking.com":{
+                "Rating":
+                    "Out of 71 ratings, The Pines is rated 7.2 / 10.0 from visitors.",
+                "Review":
+                    "It was a good getaway and Kenny (front desk) and the waitress from the cafe were very helpful"
+            },
+            "Google":{
+                "Rating":
+                    "Out of 206 ratings, The Pines is rated 3.7",
+                "Review":
+                    "Went here because other hotels are fully booked & the price is reasonable for 6 pax (RM280/per night). Unit is very spacious, however floor is a bit dusty as when we came in and one of the shower have pretty low water pressure. The furniture in the unit look quite outdated but functional still. However, this place has great view and you are able to rent a bicycle to cycle around the place. Only thing is the receptionist area is very quite and dark it's almost scary even if its during the day. The unit here looks rundown because of the paint and mold. But, i enjoyed my stay regardless."
+            }
+        },
+        "Silverpark Resort":{
+            "Agoda":{
+                "Rating":
+                    "Out of 134 ratings, Silverpark Resort is rated 8.1/10.0 from visitors.",
+                "Review":
+                    "Very clean, happy to recommend, Our party of 4 adults had an enjoyable time at FH Comfy Home @ Silver Park. I can comment on unit A356: This 2 room apartment was very clean and had a very pleasant view. Facilities within the apartment were as advertised, ie. very adequate. I was very happy to find that affordable, clean, comfortable apartments are available at Fraser's Hill. One suggestion: shower curtains in the toilets would be a nice addition."
+            },
+            "Airbnb":{
+                "Rating":
+                    "Out of 69 ratings, Silverpark Resort is rated 4.38/5.0 from visitors.",
+                "Review":
+                    "The host responsive is superb. Please don't hesitate to ask the host about anything. Personally, the place is much better than expected and the price is so affordable. You dont need a fan as the weather is so cold, really enjoy that."
+            },
+            "Booking.com":{
+                "Rating":
+                    "Out of 31 ratings, Silverpark Resort is rated 8.2/10.0 from visitors.",
+                "Review": 
+                    "Liked · The entire enjoy was good and had a good time with entire family members of 12. No complaints. Disliked · Wrong time to go there when its raining season. Landslides and road closure caused some confusions. This is due to local authorities (nothing to do with host/apartment management). Host and apartment management always kept updating information."
+            },
+            "Google":{
+                "Rating":
+                    "Out of 329 ratings, Silverpark Resort is rated 4.1/5.0 from visitors.",
+                "Review":
+                    "The ones I'm staying at is very comfortable. There's kitchen utensils I can use for cooking and eating. Other than that, beds are extremely comfy for me and my family to sleep. There's water heater you can turn on when showering. Furthermore, they have a coffee table and chairs in the balcony which I sat outside while reading a novel. Unfortunately, it's kind of hard to get data here. Overall, the service here is great and I love it (It gets really foggy when it rains at night)"
+            }
+        },
+        "Green Acres":{
+            "Agoda":{
+                "Rating":
+                    "Out of 49 ratings, Puncak Inn is rated 8.9/10.0 from visitors.",
+                "Review":
+                    "overall the house is good. come with a big room with attached bathroom. but the house is located a bit far from town and roads to the house is quite scary (depend on personals). the location would be perfect for those who really wan come relax and enjoy the nature... nothing much to be done nearby the house, but the house is equipped with some leisure items like kids room (no so much to play with actually), a TV set, trampoline, pool table.... if would be better to equip more items as the location is a bit far from town. normally after back from dinner wont go out already."
+            },
+            "Booking.com":{
+                "Rating":
+                    "Out of 34 ratings, Green Acres is rated 7.9 / 10.0 from visitors.",
+                "Review":
+                    "We love the house and the location.. far from the town. Beautiful place to stay for relaxation & calmness. The caretaker really helpful and the host is friendly too. Love the trampoline as well😍. Will definitely come back for a longer stay.."
+            },
+            "Google":{
+                 "Rating":
+                    "Out of 11 ratings, Green Acres is rated 4.7 / 5.0 from visitors.",
+                 "Review":
+                    "A great place to get away. However, not elderly friendly as there is no direct driveway access to the cottage other than the concrete stairs."
+            }
+        },
+        "80 Colonie":{
+            "Agoda":{
+                "Rating":
+                    "Out of 30 ratings, 80 Colonie has a rating of 4.5/5.0 from visitors.",
+                "Review":
+                    "Me and my family enjoyed our stay in the unit we booked. Very nice unit and the balcony look out to the green with birds and squirrels running the trees and flowers. My kids loved the daybed swing. They spend all their time on the daybed when ever we were back in the unit. Will definately stay here again."
+            },
+            "Airbnb":{
+                "Rating":
+                    "Out of 79 ratings, Colonie 80 has a rating of 4.61/5.0 from visitors.",
+                "Review":
+                    "Loved the location, cleanliness and design of the apartment. Situated at the top so views were great. Hosts were wonderful when it came to attending to our needs."
+            },
+            "Booking.com":{
+                "Rating":
+                    "Out of 13 ratings, Colonie 80 has a rating of 8.7/10.0 which is Fabulous",
+                "Review":
+                    "Very clean, comfortable, well equipped and interior design is attractive."
+            },
+            "Google":{
+                "Rating":
+                    "Out of 30 ratings, Colonie 80 has a rating of 4.5/5.0.",
+                "Review":
+                    "Me and my family enjoyed our stay in the unit we booked. Very nice unit and the balcony look out to the green with birds and squirrels running the trees and flowers. My kids loved the daybed swing. They spend all their time on the daybed when ever we were back in the unit. Will definately stay here again."
+            }
+        },
+        "The Hill":{
+            "Agoda":{
+                 "Rating":
+                    "Out of 6 ratings, The Hill has a rating of 8.7/10.0 from visitors.",
+                 "Review":
+                    "Clean and nice place to stay. I love the complimentary coffee. Friendly host and clear instructions and informations sharing . Great sunrise view from the balcony . All good !"
+            },
+            "Airbnb":{
+                 "Rating":
+                    "Out of 9 ratings, The Hill has a rating of 5.0/5.0",
+                 "Review":
+                    "Clean place, open communication and amazing view and balcony being the top floor! Couldn't have asked for more."
+            },
+            "Trivago":{
+                "Rating":
+                    "Out of 118 ratings, The hill has a rating of Superb which is 9.0/10.0",
+                "Review":
+                    "Apartment was clean with full kitchenware available, quite and wifi. Location good. Staff is friendly and owner is superb, sending places of interest and F&B outlets recommendations prior arrival. Will definitely come back"
+            },
+            "Booking.com":{
+                "Rating":
+                    "Out of 118 ratings, The hill has a rating of Superb which is 9.0/10.0",
+                "Review":
+                    "Apartment was clean with full kitchenware available, quite and wifi. Location good. Staff is friendly and owner is superb, sending places of interest and F&B outlets recommendations prior arrival. Will definitely come back"
+            },
+            "Google":{
+                "Rating":
+                    "Out of 7 ratings, The Hill has a rating of 5.0/5.0",
+                "Review":
+                    "Superb wifi and cleanliness, newly renovated. Hosts were exceptionally welcoming and helpful, made our stay much more memorable."
+            }
+        },
+        "The Smokehouse":{
+            "Google":{
+                "Rating":
+                    "Out of 588 ratings, Ye Olde Smokehouse is rated 3.8/5.0.",
+                "Review":
+                    "We love the old style furniture inside the room. Tea was great, we had orange cake, ginger cake, brownies, apple pie and scones -all tasted good. Dinner was also yummy. I personally love English bfast by the garden. All staff are friendly especially Mr Hafiz."
+            }
+        }          
     },
     "ac_landmark":{
-        "Shahzan Inn": [
-            "The Paddock is 800 m from Shahzan Inn.",
-            "Scott's Pub & Restaurant is 270 m (2 minutes) from Shahzan Innt."
-        ],
-        "Puncak Inn": [
-            "Scott's Pub & Restaurant is 150 m (1 minute) from Puncak Inn",
-            "Abu Suradi Trail is 350 m (2 minute) from Puncak Inn"
-        ],
-        "The Pines": [
-            "Fraser's Hill golf course id 1.3 km (4 minutes) from The Pines.",
-            "Scott's Pub & Restaurant is 1.5 km (5 minutes) from The Pines."
-        ],
-        "Silverpark Resort": [
-            "The Paddock is 1.4 km (5 minutes) from Silverpark Resort",
-            "Pine Tree Trail is 1.7 km (6 minutes) from Silverpark Resort"
-        ],
-        "Green Acres": [
-            "Fraser's Hill golf course is 2.8 km (9 minutes) from Green Acres.",
-            "The Paddock is 3.4 km (11 minutes) from Green Acres."
-        ]
+        "Shahzan Inn":{
+            "Natural":[
+                "Jeriau Waterfall is 4.8 km (16 minutes) from Shahzan Inn.",
+                "Hemmant Trail is 450 m (2 minutes) from Shahzan Inn."
+            ],
+            "Architectural":[
+                "Scott's Pub & Restaurant is 270 m (2 minutes) from Shahzan Inn.",
+                "The Paddock is 800 m from Shahzan Inn."
+            ]
+        },
+        "Puncak Inn":{
+            "Natural":[
+                "Abu Suradi Trail is 350 m (2 minute) from Puncak Inn",
+                "Pine Tree Trail is 1.6 km (6 minutes) from Puncak Inn"
+            ],
+            "Architectural":[
+                "The Paddock is 1.0 km (3 minutes) from Puncak Inn."
+            ]
+        },
+        "The Pines":{
+            "Natural":[
+                "Pine Tree Trail is 2.4 km (8 minutes) from The Pines",
+                "Bishop Trail is 850 m (3 minutes) from The Pines"
+            ],
+            "Architectural":[
+                "Fraser's Hill golf course id 1.3 km (4 minutes) from The Pines.",
+                "Scott's Pub & Restaurant is 1.5 km (5 minutes) from The Pines."
+            ]
+        },
+        "Silverpark Resort":{
+            "Natural":[
+                "Pine Tree Trail is 1.7 km (6 minutes) from Silverpark Resort",
+                "Taman Awam Bukit Fraser is 750 m (3 minutes) from Silverpark Resort"
+            ],
+            "Architectural":[
+                "The Paddock is 1.4 km (5 minutes) from Silverpark Resort",
+                "Allan's Water is 1.1 km (5 minutes) from Silverpark Resort"
+            ]
+        },
+        "Green Acres":{
+            "Natural":[
+                "Hemmant Trail is 3.1 km (10 minutes) from Green Acres",
+                "Taman Awam Bukit Fraser is 3.5 km (12 minutes) from Green Acres" 
+            ],
+            "Architectural":[
+                "Fraser's Hill golf course is 2.8 km (9 minutes) from Green Acres.",
+                "The Paddock is 3.4 km (11 minutes) from Green Acres." 
+            ]
+        },
+        "The Hill":{
+            "Natural":[
+                "Bishop Trail is 650 m (9 minutes) from The Hill. ",
+                "Jeriau Waterfall is 4.7 km (16 minutes) from The Hill. "
+            ],
+            "Architectural":[
+                "Fraser's Hill golf course is 1.3 km (5 minutes) from The Hill.",
+                "The Bird Interpretive Center is 1.2km (5 min) away from The Hill"
+            ]
+        },            
+        "80 Colonie":{
+            "Natural": [
+                "Jeriau Waterfall is 4.6 km (16 minutes) from 80 Colonie",
+                "Maxwell Trail is 1.9 km (6 minutes) from 80 Colonie"
+            ],
+            "Architectural":[
+                "Fraser's Hill golf course is 1.2 km (5 minutes) from 80 Colonie",
+                "Allan's Water is 1.0 km (5 minutes) from Colonie 80"
+            ]
+        },
+        "The Smokehouse":{
+            "Natural": [
+                "Rompin Trail is 350 meters (1 minute) away from The Smokehouse.",
+                "Taman Awam Bukit Fraser is 260 m (1 minute) from The Smokehouse."
+            ],
+            "Architectural":[
+                "Fraser's Hill Strawberry Garden is 1.1 km (3 minutes) from The Smokehouse.",
+                "The Paddock is 3.4 km (11 minutes) from Green Acres."
+            ]
+        }
     },
-    "ac_booking":
-        "You may proceed to this link to book and check the availability of the rooms.",
+    "ac_booking":{
+        "Shahzan Inn": {
+            "Agoda": 
+                "https://www.agoda.com/shahzan-inn-fraser-s-hill/hotel/fraser-hill-my.html?cid=1844104",
+            "Trivago":
+                "https://www.trivago.com.my/ms/bukit-fraser-75078/hotel/shahzan-inn-fraser-hill-1038786",
+            "Booking.com":
+                "https://www.booking.com/hotel/my/shahzan-inn-fraser-s-hill.en-gb.html?aid=318615;label=English_Malaysia_EN_MY_28546570465-jELQnVdAMC_8Kt9BEgFNcAS108255837745%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi2132673637%3Atiaud-297601666475%3Adsa-209715373945%3Alp9065505%3Ali%3Adec%3Adm;sid=7895a6c1110018b2e737e0503c04d94b;dest_id=-2405539;dest_type=city;dist=0;group_adults=2;group_children=0;hapos=1;hpos=1;no_rooms=1;req_adults=2;req_children=0;room1=A%2CA;sb_price_type=total;sr_order=popularity;srepoch=1644500543;srpvid=07c5605efc14028c;type=total;ucfs=1&#hotelTmpl",
+            "Hotel-Website":
+                "https://www.shahzaninn-fraserhill.com/"
+        },
+        "Puncak Inn":{
+            "Agoda":
+                "https://www.agoda.com/shahzan-inn-fraser-s-hill/hotel/fraser-hill-my.html?cid=1844104",
+            "Trivago":
+                "https://www.trivago.com.my/?aDateRange%5Barr%5D=2022-02-20&aDateRange%5Bdep%5D=2022-02-21&iRoomType=7&aRooms%5B0%5D%5Badults%5D=2&cpt2=2099812%2F100&hasList=1&hasMap=0&sharedcid=2099812&tab=overview&ra=",
+            "Hotel-Website":
+                "https://www.puncakinn.com/"
+        },
+        "The Pines":{
+            "Agoda":
+                "https://www.agoda.com/shahzan-inn-fraser-s-hill/hotel/fraser-hill-my.html?cid=1844104",
+            "Trivago":
+                "https://www.trivago.com.my/fraser-s-hill-75078/hotel/the-pines-resort-frasers-hill-2665384",
+            "Booking.com":
+                "https://www.booking.com/hotel/my/the-pines-resort-fraser-39-s-hill-malaysia.en-gb.html?aid=356980;label=gog235jc-1DCAsooQFCKnRoZS1waW5lcy1yZXNvcnQtZnJhc2VyLTM5LXMtaGlsbC1tYWxheXNpYUgzWANooQGIAQGYAQm4ARfIAQzYAQPoAQGIAgGoAgO4AuSwlJAGwAIB0gIkMGNjZGY0ZWEtM2IxOS00MDU0LWE5OGYtYmNlNzgyYWI0YWVm2AIE4AIB;sid=7895a6c1110018b2e737e0503c04d94b;dist=0&group_adults=2&group_children=0&keep_landing=1&no_rooms=1&sb_price_type=total&type=total&",
+            "Hotel-Website":
+                "https://www.thepines.com.my/main.htm."
+        },
+        "Silverpark Resort":{
+            "Agoda":
+                "https://www.agoda.com/a356-silverpark-resort-2-rooms-apartment/hotel/fraser-hill-my.html?cid=1844104",
+            "Trivago":
+                "https://www.trivago.com.my/?aDateRange%5Barr%5D=2022-02-20&aDateRange%5Bdep%5D=2022-02-21&iRoomType=7&aRooms%5B0%5D%5Badults%5D=2&cpt2=20616444%2F100&hasList=1&hasMap=0&sharedcid=20616444&tab=overview&ra=",
+            "Booking.com":
+                "https://www.booking.com/hotel/my/the-haven-retreat-b7-2-1-silverpark.html?aid=397594;label=gog235jc-1DCAEoggI46AdIM1gDaKEBiAEBmAExuAEXyAEM2AED6AEB-AECiAIBqAIDuALqsJSQBsACAdICJDMzNzk3NTE3LTIxOGMtNGU3Ny1iY2UyLTZhOTRlZWYwZDBlNdgCBOACAQ;sid=51ad54e6eaef6ba80e61f0f5fab9f3d9;all_sr_blocks=489221001_285739289_7_0_0;checkin=2022-02-11;checkout=2022-02-27;dist=0;group_adults=2;group_children=0;hapos=1;highlighted_blocks=489221001_285739289_7_0_0;hpos=1;matching_block_id=489221001_285739289_7_0_0;no_rooms=1;req_adults=2;req_children=0;room1=A%2CA;sb_price_type=total;sr_order=distance_from_search;sr_pri_blocks=489221001_285739289_7_0_0__504000;srepoch=1644501128;srpvid=dcb7618061d00226;type=total;ucfs=1&#hotelTmpl"
+        },
+        "Green Acres":{
+            "Agoda": 
+                "https://www.agoda.com/shahzan-inn-fraser-s-hill/hotel/fraser-hill-my.html?cid=1844104",
+            "Trivago":
+                "https://www.trivago.com.my/fraser-s-hill-75078/hotel/green-acres-fraser-hill-19316116",
+            "Booking.com":
+                "https://www.booking.com/hotel/my/ester-family-room-green-acres.en-gb.html?aid=318615;label=English_Malaysia_EN_MY_28546570465-jELQnVdAMC_8Kt9BEgFNcAS108255837865%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atiaud-297601666475%3Adsa-209715373945%3Alp9065505%3Ali%3Adec%3Adm;sid=e992bd83a62f61452a8bcbf929bf8198;all_sr_blocks=576022604_240992145_0_0_0;checkin=2022-02-25;checkout=2022-02-26;dest_id=-2405539;dest_type=city;dist=0;group_adults=2;group_children=0;hapos=1;highlighted_blocks=576022604_240992145_0_0_0;hpos=1;matching_block_id=576022604_240992145_0_0_0;no_rooms=1;req_adults=2;req_children=0;room1=A%2CA;sb_price_type=total;sr_order=popularity;sr_pri_blocks=576022604_240992145_0_0_0__199405;srepoch=1644648379;srpvid=6dfb2f9a46a10150;type=total;ucfs=1&#hotelTmpl",
+            "Hotel-Website":
+                "https://www.greenacresfraser.com/"
+        },
+        "80 Colonie":{
+            "Agoda": 
+                "https://www.agoda.com/colonie-1111-where-minimalism-meets-nature/hotel/kuala-lumpur-my.html?cid=1844104",
+            "Airbnb":
+                "https://www.airbnb.com/rooms/17483506?source_impression_id=p3_1644501431_UgUGN5rS9%2FOiHuCj",
+            "Booking.com":
+                "https://www.booking.com/hotel/my/colonie-1111-where-minimalism-meets-nature.html",
+            "Hotel-Website":
+                "https://80colonie.com/"
+        },
+        "The Hill":{
+            "Agoda":
+                "https://www.agoda.com/the-hill-at-fraser-hill/hotel/kuala-lumpur-my.html?cid=1844104",
+            "Airbnb":
+                "https://www.airbnb.com/rooms/43995014?source_impression_id=p3_1644501655_k%2Bcc28VYhie1AI9%2F",
+            "Trivago":
+                "https://www.trivago.com.my/fraser-s-hill-75078/hotel/the-hill-at-fraser-hill-22888062",
+            "Booking.com":
+                "https://www.booking.com/hotel/my/the-hill-at-fraser-hill.en-gb.html"
+        },
+        "The Smokehouse": {
+            "Hotel-Website":
+                "https://thesmokehouse.my/ye-olde-smokehouse-frasers-hill/"
+        }
+    },        
     "ac_clear":{
         "Shahzan Inn": 
             "You can try Shahzan Inn. Refer to link: ",
@@ -161,7 +503,13 @@
         "Silverpark Resort": 
             "You can try Silverpark Resort. Refer to link: ",
         "Green Acres": 
-            "You can try Green Acres. Refer to link: "
+            "You can try Green Acres. Refer to link: ",
+        "The Hill": 
+            "You can try The Hill. Refer to link: ",
+        "80 Colonie": 
+            "You can try 80 Colonie. Refer to link: ",
+        "The Smokehouse": 
+            "You can try The Smokehouse. Refer to link: "
     },
     "ac_image":
         "Hotel Image",
@@ -221,6 +569,39 @@
                 "The room provides a double bed and a large window to enjoy the view in the morning.",
                 "The bungalow consists of nine single beds, a Queen sized bed and two king sized beds." 
             ]
+        },
+        "80 Colonie":{
+            "Images":[
+                "https://q-xx.bstatic.com/xdata/images/hotel/max500/273892306.jpg?k=7da82de310612cdc9bda45343ee82862cf854e59e0f55b0753a98a77fa86987b&o=",
+                "https://80colonie.com/wp-content/uploads/2020/05/main-banner.jpg"
+            ],
+            "Description":[
+                "The unit provides 2 bedrooms with a large double bed each, a private kitchen, bathroom, and balcony.",
+                "The room provides a large double bed with beautiful lamp.",
+                "The room consist of 2 large double bed and a small window beside the bed where the light comes in every morning."
+            ]
+        },
+        "The Hill":{
+            "Images":[
+                "https://t-cf.bstatic.com/xdata/images/hotel/max1280x900/259509793.jpg?k=5ac67a88ecbc7991447a8e1803b9e0e6f16cb97d01f900226a1f281ffcb430c0&o=&hp=1",
+                "https://q-xx.bstatic.com/xdata/images/hotel/840x460/274472596.jpg?k=67a9a35920812e66442c0bb0fc3b98ada42d17f53f1950f3fc907c1425785410&o="
+            ],
+            "Description":[
+                "The room provides 2 single bed and 1 king size bed with a balcony or terrace that provides mesmerizing forest view.",
+                "The unit provides Wi-Fi, table on balcony, family room and baathroom.",
+                "The room is well-furnished with a wide-angled windows that provides view on the clear blue sky and forest."
+            ]
+        },
+        "The Smokehouse":{
+            "Images":[
+                "https://media-cdn.tripadvisor.com/media/photo-s/0f/75/22/d5/charlotte-suite.jpg",
+                "https://media-cdn.tripadvisor.com/media/photo-s/0d/0b/e7/02/honeymoon-suite.jpg"
+            ],
+            "Description":[
+                "The room provides a long bath with shower, television, desk, hair dryers, toiletries and Wi-Fi.",
+                "The room provides one queen size bed with a big wardrobe and a couch.",
+                "The room provides one queen size bed with a single bed and is equipped with good lighting.."
+            ]
         }
     },
     "ac_restaurant":
@@ -235,7 +616,13 @@
         "Silverpark Resort":
             "Unfortunately, no on-site food are available for visitors.",
         "Green Acres":
-            "The café at the hotel serves barbeque, western cuisine and pastries."
+            "The café at the hotel serves barbeque, western cuisine and pastries.",
+        "80 Colonie":
+            "Unfortunately, no on-site food are available for visitors.",
+        "The Hill":
+            "Unfortunately, no on-site food are available for visitors.",
+        "The Smokehouse":
+            "The Smokehouse restaurant has been offering colonial English-inspired meals such as hearty soups, roast chicken, and sherry trifle."
     },
     "ac_fnb_offsite":{
         "Shahzan Inn":[
@@ -257,6 +644,18 @@
         "Green Acres":[
             "Pines Café which is 3.9 km away from Green Acres provides the best halal Chinese food especially the claypot curry fish head, sweet and sour chicken and steamboat cuisine.",
             "Green Roses located 3.5 km away from Green Acres features the best Nasi Lemak which is a must try that solds out as early as 9 a.m., buckle up to get a taste of it."
+        ],
+        "80 Colonie":[
+            "Aida Daniya Restaurant & English Teahouse that is located 0.5 km away from 80 Colonie that serves British cuisines.",
+            "Restoran Arzed which serves Malaysia cuisines is located 0.8 km away from 80 Colonie at Jalan Pahang."
+        ],
+        "The Hill":[
+            "Pines Café is 1.6 km (5 minutes) from The Hill Fraser's Hill.",
+            "Scott's Pub and Restaurant is located 1.5 km (5 minutes) from The Hill Fraser's Hill."
+        ],
+        "The Smokehouse":[
+            "Tea House Restaurant & Cafe that is located 0.6 km away from The Smokehouse at Jalan Lady Maxwell beside Majlis Bukit Fraser.",
+            "Arzed Restaurant which serves Malaysian cuisines is located 0.6 km away from The Smokehouse."
         ]
     }
 }     

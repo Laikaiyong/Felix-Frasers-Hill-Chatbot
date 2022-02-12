@@ -47,12 +47,48 @@
                     <button type="button" class="btn btn-info nav-link btn-sm border border-info border-5">View</button>
                 </a>
 
-                {% elif "This is the list of the accomodations." == message.content or "Do you prefer onsite or offsite?" == message.content %}
+                {% elif "Facilities/Amenities provided" == message.content %}
                 <p class="card-text">{{ message.content }}</p>
-                    {% for option in options %}
-                    <button class="m-2 btn btn-dark text-white option-btn">{{ option }}</button>
+                <div class="list-group">
+                    {% for facility in message.facilities %}
+                    <a href="" class="list-group-item list-group-item-action list-group-item-dark">{{ facility }}</a>
+                    {% endfor %}
+                </div>
+
+                {% elif "Select the platform for respective rating and reviews" == message.content %}
+                <p class="card-text">{{ message.content }}</p>
+                    {% for r_platform in review_platforms%}
+                    <button class="m-2 btn btn-dark text-white reviews" data-datac="Rating and Review at {{ r_platform }}">{{ r_platform }}</button>
+                    {% endfor %}
+                
+                {% elif message.rating %}
+                <p class="card-text"><b>Rating</b><br/>{{ message.rating }}</p><br/>
+                <p class="card-text"><b>Top Comment</b><div class="overflow-auto" height="450">{{ message.review }}</div></p>
+
+                {% elif "Hotel booking are available at" == message.content %}
+                <p class="card-text">{{ message.content }}</p>
+                    {% for b_platform in booking_platforms %}
+                    <button class="m-2 btn btn-dark text-white booking" data-datac="Booking at {{ b_platform }}">{{ b_platform }}</button>
                     {% endfor %}
 
+                {% elif "This is the list of the accomodations." == message.content %}
+                <p class="card-text">{{ message.content }}</p>
+                    {% for hotel in hotels %}
+                    <button class="m-2 btn btn-dark text-white option-btn">{{ hotel }}</button>
+                    {% endfor %}
+
+                {% elif "Do you prefer onsite or offsite?" == message.content %}
+                <p class="card-text">{{ message.content }}</p>
+                    {% for locate in restaurant_locate %}
+                    <button class="m-2 btn btn-dark text-white option-btn">{{ locate }}</button>
+                    {% endfor %}
+
+                {% elif "Landmark Type" == message.content %}
+                <p class="card-text">{{ message.content }}</p>
+                    {% for type in landmark_type %}
+                    <button class="m-2 btn btn-dark text-white option-btn">{{ type }}</button>
+                    {% endfor %}
+                
                 {% elif "Google Map" == message.content %}
                 <iframe width="450" height="450" style="border:0" loading="lazy" allowfullscreen src="{{ message.url }}}"></iframe>
 
@@ -68,7 +104,7 @@
                 {% elif "Hotel Image" == message.content %}
                 <img src="{{ message.url }}" width="350" alt="">
 
-                {% elif "You may proceed to this link to book and check the availability of the rooms." == message.content 
+                {% elif "Please proceed you booking at" in message.content 
                         or ("You can try " in message.content and "Refer to link: " in message.content) %}
                 <p class="card-text">{{ message.content }}</p>
                 <a class="btn btn-dark m-1" href="{{ message.url }}" target="_blank">Link</a>

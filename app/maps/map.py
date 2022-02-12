@@ -9,7 +9,10 @@ LOCATIONS = {
     "Puncak Inn": "Puncak Inn Bukit Fraser",
     "The Pines": "The Pines Fraser's Hill",
     "Silverpark Resort": "Silverpark Resort Fraser's Hill",
-    "Green Acres": "Green Acres Fraser's Hill"
+    "Green Acres": "Green Acres Fraser's Hill",
+    "The Hill": "The Hill at Fraser Hill",
+    "80 Colonie": "Colonie Fraser's Hill",
+    "The Smokehouse": "The Smokehouse Fraser's Hill"
 }
 
 def location_url(location_keyname):

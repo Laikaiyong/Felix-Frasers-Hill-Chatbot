@@ -48,6 +48,18 @@ $(".option-btn").click(function () {
 	$(".send-btn").click();	
 });
 
+$('.reviews').click(function() {
+	var text = $(this).data('datac');      
+	$("#message").val(text);
+	$(".send-btn").click();	  
+});
+
+$('.booking').click(function() {
+	var text = $(this).data('datac');      
+	$("#message").val(text);
+	$(".send-btn").click();	
+});
+
 var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
 var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
   return new bootstrap.Tooltip(tooltipTriggerEl)
