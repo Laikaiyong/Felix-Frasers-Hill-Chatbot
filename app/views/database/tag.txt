@@ -1,5 +1,1 @@
-<<<<<<< HEAD
 Green Acres
-=======
-The Pines
->>>>>>> 84013ea4748b5f15e51c37309a692df39ed1a4ef
