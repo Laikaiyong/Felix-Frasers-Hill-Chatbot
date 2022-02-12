@@ -68,7 +68,7 @@ AC_HOTEL_IMAGES = {
         "Green Acres": 
             "https://cf.bstatic.com/xdata/images/hotel/max1024x768/236464932.jpg?k=25717e35db0795538c371cac3a9f8528d8cf728766679cb29bd986bf41c7fa33&o=&hp=1",
         "80 Colonie":
-            "https://80colonie.com/wp-content/uploads/2020/07/B2FFD16A-5431-46CC-A9E5-DD35194F3FA1-768x768.jpg",
+            "https://p.bookcdn.com/data/Photos/Big/10231/1023139/1023139201/Colonie-FraserS-Hill-photos-Exterior-80-Colonie-Frasers-Hill.JPEG",
         "The Hill":
             "https://a0.muscache.com/im/pictures/43b869c2-624d-44c6-ba21-8308f458bdcc.jpg?aki_policy=large",
         "The Smokehouse":
