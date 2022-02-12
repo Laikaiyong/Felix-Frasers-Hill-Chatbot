@@ -1,6 +1,7 @@
 import numpy as np
 import pandas as pd
 
+import os
 import math
 import json
 import string
@@ -21,6 +22,9 @@ from nltk.stem.porter import PorterStemmer # Might not use data stemming
 nltk.download('stopwords')
 nltk.download('vader_lexicon')
 
+dirname = os.path.dirname(__file__)
+data_path = os.path.join(dirname, 'database/data.xlsx')
+
 # Self coded algorithm
 class SelfModel:
     def __init__(self):
@@ -33,7 +37,7 @@ class SelfModel:
     def _get_data(self):
         # TODO: Change excel File location based on your directory
         # Read data and process
-        excel_data = pd.ExcelFile('/Users/USER/Downloads/IAI/app/algorithm/database/data.xlsx')
+        excel_data = pd.ExcelFile(data_path)
         unprocessed_data = pd.read_excel(excel_data, 'Data')
 
         # X, y

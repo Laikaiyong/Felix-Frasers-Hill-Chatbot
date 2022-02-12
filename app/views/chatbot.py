@@ -2,6 +2,7 @@ from app.views import blueprint
 from app.algorithm import FinalModel
 from app.maps import location_url
 
+import os
 import re
 import json
 import random
@@ -110,8 +111,12 @@ AC_BOOKING = [
     "Booking at Hotel-Website",
 ]
 
-messages_file = open('/Users/USER/Downloads/IAI/app/views/database/chatbot_init.json')
-response_file = open('/Users/USER/Downloads/IAI/app/views/database/response.json', encoding="utf8")
+dirname = os.path.dirname(__file__)
+message_path = os.path.join(dirname, 'database/chatbot_init.json')
+response_path = os.path.join(dirname, 'database/response.json')
+tag_path = os.path.join(dirname, 'database/tag.txt')
+messages_file = open(message_path)
+response_file = open(response_path, encoding="utf8")
 
 messages = json.load(messages_file)['messages']
 responses = json.load(response_file)
@@ -125,14 +130,14 @@ def get_role():
     user_attribute = get_user_cas_attributes()
     email = user_attribute.mail[0]
     name = user_attribute.display_name[0]
-    with open('/Users/USER/Downloads/IAI/app/views/database/tag.txt', 'w') as init:
+    with open(tag_path, 'w') as init:
         init.write('')
     messages[0]['content'] = "Welcome {}, I am Felix chatbot, at your service.".format(name)
     return render_template('chatbot.html', messages=messages)
 
 @blueprint.route('/chatbot', methods=['POST'])
 def add_role():
-    tag_file = open('/Users/USER/Downloads/IAI/app/views/database/tag.txt')
+    tag_file = open(tag_path)
     accomodation_tag = tag_file.read()
     tag_file.close()
 
@@ -161,7 +166,7 @@ def add_role():
             )
     
     if message in HOTELS:
-        with open('/Users/USER/Downloads/IAI/app/views/database/tag.txt', 'w') as get_tag:
+        with open(tag_path, 'w') as get_tag:
             get_tag.write(message)
         
         accomodation_tag = message
