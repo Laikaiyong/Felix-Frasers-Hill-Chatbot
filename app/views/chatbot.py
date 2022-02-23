@@ -233,6 +233,8 @@ def add_role():
         result = 'ac_location'
     elif re.sub(r'[^\w\s]', '', message.lower()) in ['type of hotels', 'type of hostel', 'type of homestay', 'type of resorts']:
         result = 'accommodation'
+    elif message == "I don't like this hotel":
+        result = 'ac_clear'
 
     # Accomodations
     if result == 'accommodation':
