@@ -300,7 +300,7 @@ def add_role():
                 other_options = [hotel for hotel in HOTELS if hotel != accomodation_tag]
                 accomodation_tag = random.choice(other_options)
 
-                with open('/Users/USER/Downloads/IAI/app/views/database/tag.txt', 'w') as get_tag:
+                with open(os.path.join(dirname, 'database/tag.txt'), 'w') as get_tag:
                     get_tag.write(accomodation_tag)
                 
                 messages.append({
