@@ -25,7 +25,11 @@ Felix, a Frasers Hill Chatbot that responses to intents:
 - activities
 - thankyou
 
-# Boot up the chatbot
+# Prerequisites
+
+1. [python 3.10] (https://www.python.org/downloads/)
+
+# Installation Guide
 
 1. Initialize local virtual environment `python3 -m venv venv`
 2. Activate virtual environment `venv/bin/activate`
