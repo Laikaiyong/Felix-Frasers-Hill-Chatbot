@@ -18,7 +18,10 @@ LOCATIONS = {
 def location_url(location_keyname):
     location_query = LOCATIONS[location_keyname].split(" ")
     processed_query = "+".join(location_query)
-    url = "https://www.google.com/maps/embed/v1/place?key=" + GOOGLE_MAP_API_KEY + "&q=" + processed_query
+    if(GOOGLE_MAP_API_KEY):
+        url = "https://www.google.com/maps/embed/v1/place?key=" + GOOGLE_MAP_API_KEY + "&q=" + processed_query
+    else:
+        url = "https://www.google.com/maps/embed/v1/place?key=."+ "&q=" + processed_query
     return url
 
 

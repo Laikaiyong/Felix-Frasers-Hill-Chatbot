@@ -35,3 +35,5 @@ Felix, a Frasers Hill Chatbot that responses to intents:
 2. Activate virtual environment `venv/bin/activate`
 3. Install dependencies `pip install -r requirements.txt`
 4. Run `flask run`
+
+> Further Information: Maps will not be shown without the Google Maps API key.
